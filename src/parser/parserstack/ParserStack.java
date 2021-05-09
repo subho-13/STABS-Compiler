@@ -1,23 +1,31 @@
 package parser.parserstack;
 
 import nonterminal.NonTerminal;
+import parser.parserstack.stacksymbol.StackSymbol;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Stack;
 
 public class ParserStack {
-    private Stack<NonTerminal> stack;
-    public void push(List<NonTerminal> nonTerminalList) {
-        for(NonTerminal nonTerminal: nonTerminalList) {
-            stack.push(nonTerminal);
+    private Stack<StackSymbol> stack;
+    public void push(List<StackSymbol> stackSymbols) {
+        Collections.reverse(stackSymbols);
+        for(StackSymbol symbol: stackSymbols) {
+            stack.push(symbol);
         }
     }
 
-    public NonTerminal pop() {
-        if (stack.empty() == true) {
-            return NonTerminal.EOS;
-        }
+    public boolean isEmpty() {
+        return stack.isEmpty();
+    }
 
-        return stack.pop();
+    public StackSymbol pop() throws Exception {
+        StackSymbol symbol = stack.pop();
+        if (symbol == null) {
+            throw new Exception("Stack is empty");
+        }
+        return symbol;
     }
 }

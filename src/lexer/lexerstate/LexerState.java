@@ -5,7 +5,7 @@ import token.Token;
 import java.util.Map;
 
 public interface LexerState {
-    public void setTransitionMap(Map<Char, LexerState> map);
-    public
+    public void setTransitionMap(Map<Character, LexerState> map);
+    public LexerState move(char c);
     public Token getToken(String string);
 }
