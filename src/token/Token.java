@@ -1,5 +1,7 @@
 package token;
 
+import terminal.Terminal;
+
 public interface Token {
-    public TokenType getType();
+    public Terminal getType();
 }
