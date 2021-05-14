@@ -24,29 +24,26 @@ public class Parser {
         return lexer.isEmpty() && parserStack.isEmpty();
     }
 
-    private void handleTerminalSymbol(StackSymbol symbol) {
-        final TerminalStackSymbol terminalStackSymbol = (TerminalStackSymbol) symbol;
+    private void handleSymbol(TerminalStackSymbol symbol) {
         final Token currentToken = lexer.getCurrentToken();
 
-        if(terminalStackSymbol.getTerminal() == currentToken.getType()) {
-            terminalStackSymbol.applySpecialAction(currentToken);
+        if(symbol.getTerminal() == currentToken.getType()) {
+            symbol.applySpecialAction(currentToken);
             lexer.parseNextToken();
         } else {
             // Do the error handling here
         }
     }
 
-    private void handleNonTerminalSymbol(StackSymbol symbol) {
-        NonTerminalStackSymbol nonTerminalStackSymbol = (NonTerminalStackSymbol) symbol;
-        NonTerminal nonTerminal = nonTerminalStackSymbol.getNonTerminalType();
-
+    private void handleSymbol(NonTerminalStackSymbol symbol) {
+        NonTerminal nonTerminal = symbol.getNonTerminalType();
         Production production = driver.get(nonTerminal).get(lexer.getCurrentToken().getType());
 
         if(production == null) {
             // Error handling
         }
 
-        production.apply();
+        production.applyRule();
     }
 
     public void parse() throws Exception {
@@ -54,9 +51,9 @@ public class Parser {
             StackSymbol stackSymbol = parserStack.pop();
 
             if (stackSymbol.getType() == StackSymbolType.TERMINAL) {
-                handleTerminalSymbol(stackSymbol);
+                handleSymbol((TerminalStackSymbol) stackSymbol);
             } else {
-                handleNonTerminalSymbol(stackSymbol);
+                handleSymbol((NonTerminalStackSymbol) stackSymbol);
             }
         }
     }
