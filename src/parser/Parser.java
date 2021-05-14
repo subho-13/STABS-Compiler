@@ -8,7 +8,6 @@ import parser.parserstack.stacksymbol.StackSymbolType;
 import parser.parserstack.stacksymbol.nonterminal.NonTerminalStackSymbol;
 import parser.parserstack.stacksymbol.terminal.TerminalStackSymbol;
 import parser.production.Production;
-import parser.production.Production_1;
 import parser.symboltable.SymbolTable;
 import terminal.Terminal;
 import token.Token;
@@ -27,10 +26,10 @@ public class Parser {
 
     private void handleTerminalSymbol(StackSymbol symbol) {
         final TerminalStackSymbol terminalStackSymbol = (TerminalStackSymbol) symbol;
-        final Token token = lexer.getCurrentToken();
+        final Token currentToken = lexer.getCurrentToken();
 
-        if(terminalStackSymbol.getTerminal() == token.getType()) {
-            terminalStackSymbol.applySpecialAction(token);
+        if(terminalStackSymbol.getTerminal() == currentToken.getType()) {
+            terminalStackSymbol.applySpecialAction(currentToken);
             lexer.parseNextToken();
         } else {
             // Do the error handling here
@@ -39,7 +38,7 @@ public class Parser {
 
     private void handleNonTerminalSymbol(StackSymbol symbol) {
         NonTerminalStackSymbol nonTerminalStackSymbol = (NonTerminalStackSymbol) symbol;
-        NonTerminal nonTerminal = nonTerminalStackSymbol.getNonTerminal();
+        NonTerminal nonTerminal = nonTerminalStackSymbol.getNonTerminalType();
 
         Production production = driver.get(nonTerminal).get(lexer.getCurrentToken().getType());
 
@@ -51,7 +50,7 @@ public class Parser {
     }
 
     public void parse() throws Exception {
-        while(stopParser() == false) {
+        while(!stopParser()) {
             StackSymbol stackSymbol = parserStack.pop();
 
             if (stackSymbol.getType() == StackSymbolType.TERMINAL) {

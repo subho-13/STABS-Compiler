@@ -16,7 +16,7 @@ public class NonTerminalStackSymbol implements StackSymbol {
         return StackSymbolType.NONTERMINAL;
     }
 
-    public NonTerminal getNonTerminal() {
+    public NonTerminal getNonTerminalType() {
         return nonTerminal;
     }
 }
