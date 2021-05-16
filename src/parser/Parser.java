@@ -40,7 +40,7 @@ public class Parser {
         Production production = driver.get(nonTerminal).get(lexer.getCurrentToken().getType());
 
         if(production == null) {
-            // Error handling
+            // Error handling // Panic Mode Error recovery
         }
 
         production.applyRule();
