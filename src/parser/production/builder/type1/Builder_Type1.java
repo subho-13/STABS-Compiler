@@ -45,9 +45,8 @@ public class Builder_Type1 {
 
     private void setProduction3(){
         Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
-
-
         });
+
         map.put(3, production);
     }
 
