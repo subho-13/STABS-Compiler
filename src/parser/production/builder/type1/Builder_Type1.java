@@ -42,4 +42,21 @@ public class Builder_Type1 {
 
         map.put(2, production);
     }
+
+    private void setProduction3(){
+        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+
+
+        });
+        map.put(3, production);
+    }
+
+    private void setProduction5(){
+        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+            NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.PARAMETER);
+            NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.OTHER_PARAMS);
+            parserStack.push(stackSymbol1, stackSymbol2);
+        });
+        map.put(5, production);
+    }
 }

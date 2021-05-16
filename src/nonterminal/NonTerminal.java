@@ -3,5 +3,22 @@ package nonterminal;
 public enum NonTerminal {
     PROGRAM,
     FUNCTIONS,
-    FUNCTION
+    FUNCTION,
+    PARAMETERS,
+    PARAMETER,
+    OTHER_PARAMS,
+    TYPE,
+    TYPE_PART1,
+    TYPE_PART2,
+    STATEMENTS,
+    STATEMENT,
+    COMPOUND_STMT,
+    DECLARATION,
+    ASSIGNMENT,
+    INC_DEC_STMT,
+    IO_STMT,
+    RETURN_STMT,
+    FUNCTION_STMT,
+    IF_STMT,
+    FOR_STMT,
 }
