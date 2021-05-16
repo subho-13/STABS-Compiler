@@ -5,5 +5,5 @@ import parser.parserstack.ParserStack;
 import parser.symboltable.SymbolTable;
 
 public interface Production {
-    public abstract void applyRule();
+    public void applyRule();
 }

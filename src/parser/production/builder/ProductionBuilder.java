@@ -1,7 +1,8 @@
-package parser.production;
+package parser.production.builder;
 
 import lexer.Lexer;
 import parser.parserstack.ParserStack;
+import parser.production.Production;
 import parser.symboltable.SymbolTable;
 
 import java.util.Map;
