@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class Builder_Type1 {
     ParserStack stack;
-    Map<Integer, Production_Type1> map = new HashMap();
+    Map<Integer, Production_Type1> map = new HashMap<Integer, Production_Type1>();
 
     public Builder_Type1(ParserStack stack) {
         this.stack = stack;
