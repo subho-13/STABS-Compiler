@@ -23,6 +23,10 @@ public class Builder_Type1 {
         map.put(production_no, production);
     }
 
+    private void setProduction1() {
+
+    }
+
     private void setProduction2() {
         Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
             NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.FUNCTION);
