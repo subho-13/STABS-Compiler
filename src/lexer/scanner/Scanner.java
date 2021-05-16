@@ -1,8 +1,17 @@
 package lexer.scanner;
 
 public class Scanner {
-    java.util.Scanner scanner;
-    public boolean hasNoString() {
-        return scanner.hasNext();
+    String currentString;
+
+    public Scanner(String filename) {
+
+    }
+
+    public void constructNextString() {
+
+    }
+
+    public String getCurrentString() {
+        return currentString;
     }
 }
