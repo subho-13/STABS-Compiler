@@ -243,7 +243,6 @@ public class Builder_Type1 {
         map.put(32, production);
     }
     private void setProduction34(){
-
         Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
             TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.OPEN_SQUARE_BRACKET);
             NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.NUM_EXPR);
