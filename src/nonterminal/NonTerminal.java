@@ -21,4 +21,12 @@ public enum NonTerminal {
     FUNCTION_STMT,
     IF_STMT,
     FOR_STMT,
+    BLOCK,
+    IDENTIFIERS,
+    IDENTIFIER,
+    OTHER_IDS,
+    VARIABLE_OPT,
+    VARIABLE,
+    VALUE,
+    NUM_EXPR
 }
