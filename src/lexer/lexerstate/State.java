@@ -4,29 +4,35 @@ import token.Token;
 
 import java.util.HashMap;
 import java.util.Map;
+import static lexer.StateMapping.stateMap;
 
 public class State implements  LexerState{
 
-    Token token;
-    boolean tokenExists = false;
     String tokenValue;
     Map<Character, LexerState> transitionMap;
 
     @Override
-    public void setTransitionMap(Map<Character, LexerState> map) {
+    public void setTransitionMap(Map<Character, LexerState> map, String currToken) {
+        this.tokenValue = currToken;
         this.transitionMap = new HashMap<>(map);
     }
 
     @Override
     public LexerState move(char c) {
+        if(this.transitionMap.get(c) == null) {
+            // handle exception
+            // no such token exists
+        }
 
-        // somehow need to pass the char val to the next state
-        //
-        return null;
+        LexerState temp = this.transitionMap.get(c);
+        tokenValue += c;
+        temp.setTransitionMap(stateMap.get(temp), tokenValue);
+        return temp;
     }
 
     @Override
-    public Token getToken(String string) {
+    public Token getToken(String str) {
+        Token token;
         return null;
     }
 }

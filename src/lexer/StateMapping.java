@@ -9,11 +9,11 @@ import static lexer.lexerstate.StateRepository.lxState;
 
 public class StateMapping {
 
-    static Map<LexerState, Map<Character, LexerState>> stateMap = new HashMap<>(){{
+    public static Map<LexerState, Map<Character, LexerState>> stateMap = new HashMap<>(){{
 
         put(lxState[0], new HashMap<Character, LexerState>(){{
             put('i', lxState[1]);
-            put('f', lxtate[9]);
+            put('f', lxState[9]);
             put('e', lxState[16]);
             put('+', lxState[22]);
 
@@ -42,10 +42,10 @@ public class StateMapping {
             put('/', lxState[45]);
             put('&', lxState[47]);
             put('|', lxState[48]);
-            put('!', lxState[36]);
+            put('!', lxState[50]);
         }});
 
-        put(lxState1, new HashMap<Character, LexerState>(){{
+        put(lxState[1], new HashMap<Character, LexerState>(){{
 
 
         }});
