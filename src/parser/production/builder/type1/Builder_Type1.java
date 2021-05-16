@@ -38,5 +38,9 @@ public class Builder_Type1 {
         insertIntoMap(2, production);
     }
 
+    public void helloworld(){
+        System.out.println("hell");
+    }
+
 
 }
