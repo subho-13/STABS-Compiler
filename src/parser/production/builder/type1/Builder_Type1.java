@@ -4,8 +4,10 @@ import nonterminal.NonTerminal;
 import parser.parserstack.ParserStack;
 import parser.parserstack.stacksymbol.StackSymbol;
 import parser.parserstack.stacksymbol.nonterminal.NonTerminalStackSymbol;
+import parser.parserstack.stacksymbol.terminal.TerminalStackSymbol;
 import parser.production.Production;
 import parser.production.type.type1.Production_Type1;
+import terminal.Terminal;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -19,12 +21,15 @@ public class Builder_Type1 {
         this.stack = stack;
     }
 
-    private void insertIntoMap(int production_no, Production_Type1 production) {
-        map.put(production_no, production);
-    }
-
     private void setProduction1() {
+        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+            NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.FUNCTIONS);
+            TerminalStackSymbol stackSymbol2 = new TerminalStackSymbol(Terminal.EOF);
 
+            parserStack.push(stackSymbol1, stackSymbol2);
+        });
+
+        map.put(1, production);
     }
 
     private void setProduction2() {
@@ -32,15 +37,9 @@ public class Builder_Type1 {
             NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.FUNCTION);
             NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.FUNCTIONS);
 
-            stack.push(stackSymbol1, stackSymbol2);
+            parserStack.push(stackSymbol1, stackSymbol2);
         });
 
-        insertIntoMap(2, production);
+        map.put(2, production);
     }
-
-    public void helloworld(){
-        System.out.println("hell");
-    }
-
-
 }
