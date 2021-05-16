@@ -7,5 +7,6 @@ public enum Terminal {
     COMMA,
     SEMICOLON,
     OPEN_SQUARE_BRACKET,
-    CLOSE_SQUARE_BRACKET
+    CLOSE_SQUARE_BRACKET,
+    EQUALS,
 }
