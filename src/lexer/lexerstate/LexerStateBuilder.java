@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LexerStateBuilder {
-    LexerState[] state = new LexerState[55];
+    public LexerState[] state = new LexerState[56];
 
     private void configureState27() {
         Map<Character, LexerState> map = new HashMap<Character, LexerState>();
