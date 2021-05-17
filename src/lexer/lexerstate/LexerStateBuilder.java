@@ -245,3 +245,5 @@ public class LexerStateBuilder {
         });
     }
 }
+
+/* for first push*/
