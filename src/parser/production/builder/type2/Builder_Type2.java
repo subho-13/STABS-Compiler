@@ -28,7 +28,7 @@ public class Builder_Type2 {
             NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.TYPE);
             TerminalStackSymbol stackSymbol2 = new TerminalStackSymbol(Terminal.IDENTIFIER);
 
-        })
+        });
     }
 
     private void setProduction9() {
