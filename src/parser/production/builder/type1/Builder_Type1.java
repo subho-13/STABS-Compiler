@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class Builder_Type1 {
     ParserStack stack;
-    Map<Integer, Production_Type1> map = new HashMap<Integer, Production_Type1>();
+    Map<Integer, Production_Type1> map = new HashMap<>();
 
     public Builder_Type1(ParserStack stack) {
         this.stack = stack;
@@ -446,7 +446,7 @@ public class Builder_Type1 {
     }
     private void setProduction61(){
         Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
-            TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.SUB_OP);
+            TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.SUBSTRACT);
             parserStack.push(stackSymbol1);
         });
         map.put(61, production);
