@@ -2,8 +2,10 @@ package lexer.lexerstate;
 
 
 // implement all instances of LexerState class for DFA
-// we have currently 51 states
+// we have currently 55 states
 public class StateRepository {
 
-    public static LexerState[] lxState = new State[52];
+    public static LexerState[] lxState = new State[55];
+
+
 }

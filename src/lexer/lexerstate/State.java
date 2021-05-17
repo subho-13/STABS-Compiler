@@ -9,6 +9,8 @@ import static lexer.StateMapping.stateMap;
 public class State implements  LexerState{
 
     String tokenValue;
+    boolean isFinalState;
+
     Map<Character, LexerState> transitionMap;
 
     @Override
