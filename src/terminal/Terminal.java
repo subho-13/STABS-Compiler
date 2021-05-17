@@ -3,6 +3,7 @@ package terminal;
 public enum Terminal {
     INCREMENT, DECREMENT,
     MULTIPLY, DIVIDE,
+    ADD, SUBSTRACT,
     EQUALS, NOT_EQ,
     LESSER, LESSER_EQ, GREATER, GREATER_EQ,
     OR, AND,
@@ -16,10 +17,5 @@ public enum Terminal {
     FOR,
     INPUT, PRINT,
     RETURN,
-    INT_VAL, FLOAT_VAL, IDENTIFIER,
-    ADD_OP,
-    MUL_OP,
-    SUB_OP,
-
-
+    INT_VAL, FLOAT_VAL, IDENTIFIER
 }

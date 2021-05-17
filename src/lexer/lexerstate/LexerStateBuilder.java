@@ -10,25 +10,31 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LexerStateBuilder {
-    LexerState start = new LexerState();
-    LexerState state_1 = new LexerState();
-    LexerState state_2 = new LexerState();
-    LexerState state_3 = new LexerState();
+    LexerState[] state = new LexerState[55];
 
-    public LexerState getInitialState() {
-        return start;
+    private void configureState41() {
+        Map<Character, LexerState> map = new HashMap<Character, LexerState>();
+
+        state[41].setTransitionMap(map);
+        state[41].setTokenBuilder((string) -> {
+            Token token = new ReservedToken(Terminal.ASSIGN);
+            return token;
+        });
     }
 
-    private void configureStart() {
-        Map<Character, LexerState>  map = new HashMap<Character, LexerState>();
-        start.setTransitionMap(map);
+    private void configureState42() {
+        state[42].setTokenBuilder((string) -> {
+            Token token = new ReservedToken(Terminal.EQUALS);
+            return token;
+        });
     }
 
-    private void configureState_1() {
-        Map<Character, LexerState>  map = new HashMap<Character, LexerState>();
-        state_1.setTransitionMap(map);
-        state_1.setTokenBuilder((string) -> {
-            Token token = new IntToken(Integer.parseInt(string));
+    private void configureState27() {
+        Map<Character, LexerState> map = new HashMap<Character, LexerState>();
+
+        state[27].setTransitionMap(map);
+        state[27].setTokenBuilder((string) -> {
+            Token token = new ReservedToken(Terminal.ADD);
             return token;
         });
     }
