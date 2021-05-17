@@ -23,7 +23,7 @@ public class ProductionBuilder {
         initializeMap();
     }
 
-    public Production getProduction(int production_no) throws Exception {
+    public Production getProduction(int production_no) {
         Production production = map.get(production_no);
 
         if (production == null) {

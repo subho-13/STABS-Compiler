@@ -80,8 +80,8 @@ public class Builder_Type1 {
 
     private void setProduction10(){
         Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
-            NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.TYPE_PART1);
-            NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.TYPE_PART2);
+            NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.TYPE_PART_1);
+            NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.TYPE_PART_2);
 
             parserStack.push(stackSymbol1, stackSymbol2);
         });
