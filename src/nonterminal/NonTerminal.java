@@ -20,7 +20,7 @@ public enum NonTerminal {
     MUL_OP,
     ADD_OP,
     REL_OP,
-    OR_OP,
+    OR_OP, AND_OP,
     NUM_EXPR, N_, T, T_, F,
     BOOL_EXPR, B_, X, X_, Y
 }

@@ -437,12 +437,196 @@ public class Builder_Type1 {
         });
         map.put(59, production);
     }
-private void setProduction60(){
+    private void setProduction60(){
         Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
         NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.ADD_OP);
         parserStack.push(stackSymbol1);
         });
         map.put(60, production);
     }
+    private void setProduction61(){
+        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+            TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.SUB_OP);
+            parserStack.push(stackSymbol1);
+        });
+        map.put(61, production);
+    }
+    private void setProduction62(){
+        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+            TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.EQUALS);
+            parserStack.push(stackSymbol1);
+        });
+        map.put(62, production);
+    }
+    private void setProduction63(){
+        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+            TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.NOT_EQ);
+            parserStack.push(stackSymbol1);
+        });
+        map.put(63, production);
+    }
+    private void setProduction64(){
+        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+            TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.LESSER);
+            parserStack.push(stackSymbol1);
+        });
+        map.put(64, production);
+    }
+    private void setProduction65(){
+        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+            TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.LESSER_EQ);
+            parserStack.push(stackSymbol1);
+        });
+        map.put(65, production);
+    }
+    private void setProduction66(){
+        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+            TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.GREATER);
+            parserStack.push(stackSymbol1);
+        });
+        map.put(66, production);
+    }
+    private void setProduction67(){
+        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+            TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.GREATER_EQ);
+            parserStack.push(stackSymbol1);
+        });
+        map.put(67, production);
+    }
+    private void setProduction68(){
+        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+            TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.AND);
+            parserStack.push(stackSymbol1);
+        });
+        map.put(68, production);
+    }
+    private void setProduction69(){
+        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+            TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.OR);
+            parserStack.push(stackSymbol1);
+        });
+        map.put(69, production);
+    }
+    private void setProduction70(){
+        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+            NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.T);
+            NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.N_);
+            parserStack.push(stackSymbol1, stackSymbol2);
+        });
+        map.put(70, production);
+    }
+    private void setProduction71(){
+        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+            NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.ADD_OP);
+            NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.NUM_EXPR);
+            parserStack.push(stackSymbol1, stackSymbol2);
+        });
+        map.put(71, production);
+    }
+    private void setProduction72(){
+        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+        });
+        map.put(72, production);
+    }
+    private void setProduction73(){
+        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+            NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.F);
+            NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.T_);
+            parserStack.push(stackSymbol1, stackSymbol2);
+        });
+        map.put(73, production);
+    }
+    private void setProduction74(){
+        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+            NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.MUL_OP);
+            NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.T);
+            parserStack.push(stackSymbol1, stackSymbol2);
+        });
+        map.put(74, production);
+    }
+   private void setProduction75(){
+        Production_Type1 production  = new Production_Type1(stack, (parserStack) -> {
 
+        });
+        map.put(75, production);
+   }
+    private void setProduction76(){
+        Production_Type1 production  = new Production_Type1(stack, (parserStack) -> {
+            NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.VARIABLE);
+            parserStack.push(stackSymbol1);
+        });
+        map.put(76, production);
+    }
+    private void setProduction77(){
+        Production_Type1 production  = new Production_Type1(stack, (parserStack) -> {
+            NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.FUNC_EXPR);
+            parserStack.push(stackSymbol1);
+        });
+        map.put(77, production);
+    }
+    private void setProduction78(){
+        Production_Type1 production  = new Production_Type1(stack, (parserStack) -> {
+            TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.INT_VAL);
+            parserStack.push(stackSymbol1); });
+        map.put(78, production);
+    }
+    private void setProduction79(){
+        Production_Type1 production  = new Production_Type1(stack, (parserStack) -> {
+            TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.FLOAT_VAL);
+            parserStack.push(stackSymbol1); });
+        map.put(79, production);
+    }
+    private void setProduction80(){
+        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+            NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.X);
+            NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.B_);
+            parserStack.push(stackSymbol1, stackSymbol2);
+        });
+        map.put(80, production);
+    }
+    private void setProduction81(){
+        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+            NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.OR_OP);
+            NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.BOOL_EXPR);
+            parserStack.push(stackSymbol1, stackSymbol2);
+        });
+        map.put(81, production);
+    }
+    private void setProduction82(){
+        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+
+        });
+        map.put(82, production);
+    }
+    private void setProduction83(){
+        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+            NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.Y);
+            NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.X_);
+            parserStack.push(stackSymbol1, stackSymbol2);
+        });
+        map.put(83, production);
+    }
+    private void setProduction84(){
+        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+            NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.AND_OP);
+            NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.X);
+            parserStack.push(stackSymbol1, stackSymbol2);
+        });
+        map.put(84, production);
+    }
+    private void setProduction85(){
+        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+
+        });
+        map.put(85, production);
+    }
+    private void setProduction86(){
+        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+            NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.NUM_EXPR);
+            NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.REL_OP);
+            NonTerminalStackSymbol stackSymbol3 = new NonTerminalStackSymbol(NonTerminal.NUM_EXPR);
+            parserStack.push(stackSymbol1, stackSymbol2, stackSymbol3);
+        });
+        map.put(86, production);
+    }
 }
