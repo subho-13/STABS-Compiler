@@ -41,6 +41,8 @@ public class LexerStateBuilder {
     }
 
      public void configureStates() {
+
+         configureState_0();
          configureState_1();
          configureState_2();
          configureState_3();
@@ -68,6 +70,7 @@ public class LexerStateBuilder {
          configureState_25();
          configureState_26();
          configureState_27();
+         configureState_28();
          configureState_29();
          configureState_30();
          configureState_31();
@@ -88,11 +91,18 @@ public class LexerStateBuilder {
          configureState_46();
          configureState_47();
          configureState_48();
+         // no config for state 49
          configureState_50();
+         // no config for state 51
          configureState_52();
+         // no config for state 53
          configureState_54();
          configureState_55();
      }
+
+    private void configureState_0() {
+        //state[0].setTransitionMap(map);
+    }
 
     private void configureState_1() {
         state[1].setTokenBuilder((string) -> {
@@ -234,6 +244,8 @@ public class LexerStateBuilder {
         });
     }
 
+
+
     private void configureState_21() {
         state[21].setTokenBuilder((string) -> {
             Token token = new IdentifierToken(string);
@@ -280,6 +292,13 @@ public class LexerStateBuilder {
     private void configureState_27() {
         state[27].setTokenBuilder((string) -> {
             Token token = new ReservedToken(Terminal.ADD);
+            return token;
+        });
+    }
+
+    private void configureState_28() {
+        state[28].setTokenBuilder((string) -> {
+            Token token = new ReservedToken(Terminal.INCREMENT);
             return token;
         });
     }
