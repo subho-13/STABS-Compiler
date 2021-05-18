@@ -70,7 +70,7 @@ public class LexerStateBuilder {
          configureState_25();
          configureState_26();
          configureState_27();
-         // no config for state 28
+         configureState_28();
          configureState_29();
          configureState_30();
          configureState_31();
@@ -292,6 +292,13 @@ public class LexerStateBuilder {
     private void configureState_27() {
         state[27].setTokenBuilder((string) -> {
             Token token = new ReservedToken(Terminal.ADD);
+            return token;
+        });
+    }
+
+    private void configureState_28() {
+        state[28].setTokenBuilder((string) -> {
+            Token token = new ReservedToken(Terminal.INCREMENT);
             return token;
         });
     }
