@@ -44,7 +44,7 @@ public class Scanner {
         }
     }
 
-    public String constructNextString() throws IOException {
+    public String getNextString() throws IOException {
         if(lookahead == '\0') {
             skipWhiteSpace();
             if (isEOF()) {
@@ -147,9 +147,5 @@ public class Scanner {
         }
 
         return stringBuilder.toString();
-    }
-
-    public String getCurrentString() {
-        return currentString;
     }
 }
