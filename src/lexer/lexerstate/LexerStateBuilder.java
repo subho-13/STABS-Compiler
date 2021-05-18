@@ -41,8 +41,6 @@ public class LexerStateBuilder {
     }
 
      public void configureStates() {
-
-         configureState_0();
          configureState_1();
          configureState_2();
          configureState_3();
@@ -95,10 +93,6 @@ public class LexerStateBuilder {
          configureState_54();
          configureState_55();
      }
-
-    private void configureState_0() {
-        state[0].setTransitionMap(map);
-    }
 
     private void configureState_1() {
         state[1].setTokenBuilder((string) -> {
@@ -239,8 +233,6 @@ public class LexerStateBuilder {
             return token;
         });
     }
-
-
 
     private void configureState_21() {
         state[21].setTokenBuilder((string) -> {
