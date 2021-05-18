@@ -9,6 +9,7 @@ import parser.parserstack.stacksymbol.nonterminal.NonTerminalStackSymbol;
 import parser.parserstack.stacksymbol.terminal.TerminalStackSymbol;
 import parser.production.Production;
 import parser.symboltable.SymbolTable;
+import parser.synchronizer.Synchronizer;
 import terminal.Terminal;
 import token.Token;
 
@@ -19,6 +20,7 @@ public class Parser {
     Map<NonTerminal, Map<Terminal, Production>> driver;
     Lexer lexer;
     SymbolTable symbolTable;
+    Synchronizer synchronizer;
 
     private boolean stopParser() {
         return lexer.isEmpty() && parserStack.isEmpty();
@@ -31,7 +33,7 @@ public class Parser {
             symbol.applySpecialAction(currentToken);
             lexer.parseNextToken();
         } else {
-            // Do the error handling here
+            //
         }
     }
 

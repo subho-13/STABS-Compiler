@@ -1,12 +1,12 @@
 package lexer;
 
 import lexer.lexerstate.LexerState;
-import lexer.scanner.Scanner;
+import lexer.scanner.Reader;
 import token.Token;
 
 public class Lexer {
     private Token currentToken;
-    private Scanner scanner;
+    private Reader scanner;
     private LexerState startState;
 
     public void parseNextToken() {
