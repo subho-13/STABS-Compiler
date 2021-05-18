@@ -23,29 +23,29 @@ public class Synchronizer {
     }
     private void configurePARAMETERS() {
         map.put(NonTerminal.PARAMETERS, new HashSet<>());
-        map[NonTerminal.PARAMETERS].add(Terminal.RIGHT_PARA);
+        map.get(NonTerminal.PARAMETERS).add(Terminal.RIGHT_PARA);
     }
     private void configurePARAMETER() {
         map.put(NonTerminal.PARAMETER, new HashSet<>());
     }
     private void configureOTHER_PARAMS() {
-        map.put(NonTerminal.OTHER_PARAS, new HashSet<>());
+        map.put(NonTerminal.OTHER_PARAMS, new HashSet<>());
     }
     private void configureTYPE() {
         map.put(NonTerminal.TYPE, new HashSet<>());
     }
     private void configureTYPE_PART1() {
-        map.put(NonTerminal.TYPE_PART1, new HashSet<>());
+        map.put(NonTerminal.TYPE_PART_1, new HashSet<>());
     }
     private void configureTYPE_PART2() {
-        map.put(NonTerminal.TYPE_PART2, new HashSet<>());
+        map.put(NonTerminal.TYPE_PART_2, new HashSet<>());
     }
     private void configureBLOCK() {
         map.put(NonTerminal.BLOCK, new HashSet<>());
     }
     private void configureSTATEMENTS() {
         map.put(NonTerminal.STATEMENTS, new HashSet<>());
-        map[NonTerminal.STATEMENTS].add(Terminal.RIGHT_CURLY);
+        map.get(NonTerminal.STATEMENTS).add(Terminal.RIGHT_CURLY);
     }
     private void configureSTATEMENT() {
         map.put(NonTerminal.STATEMENT, new HashSet<>());
@@ -67,11 +67,11 @@ public class Synchronizer {
     }
     private void configureVARIABLE() {
         map.put(NonTerminal.VARIABLE, new HashSet<>());
-        map[NonTerminal.VARIABLE].add(Terminal.EQUALS);
+        map.get(NonTerminal.VARIABLE).add(Terminal.EQUALS);
     }
     private void configureVARIABLE_OPT() {
         map.put(NonTerminal.VARIABLE_OPT, new HashSet<>());
-        map[NonTerminal.VARIABLE_OPT].add(Terminal.EQUALS);
+        map.get(NonTerminal.VARIABLE_OPT).add(Terminal.EQUALS);
     }
     private void configureVALUE() {
         map.put(NonTerminal.VALUE, new HashSet<>());
@@ -81,11 +81,11 @@ public class Synchronizer {
     }
     private void configureARRAY_ELEMS() {
         map.put(NonTerminal.ARRAY_ELEMS, new HashSet<>());
-        map[NonTerminal.ARRAY_ELEMS].add(Terminal.RIGHT_CURLY);
+        map.get(NonTerminal.ARRAY_ELEMS).add(Terminal.RIGHT_CURLY);
     }
     private void configureOTHER_ELEMS() {
         map.put(NonTerminal.OTHER_ELEMS, new HashSet<>());
-        map[NonTerminal.ARRAY_ELEMS].add(Terminal.RIGHT_CURLY);
+        map.get(NonTerminal.ARRAY_ELEMS).add(Terminal.RIGHT_CURLY);
     }
 
     private void configureINC_DEC_STATEMENT(){
