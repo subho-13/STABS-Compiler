@@ -47,11 +47,12 @@ public class Scanner {
     public String constructNextString() throws IOException {
         if(lookahead == '\0') {
             skipWhiteSpace();
-//            System.out.println("NeXt Char = " + lookahead);
+            if (isEOF()) {
+                return "eof";
+            }
         }
 
         if (Character.isLetterOrDigit(lookahead)) {
-//            System.out.println("NeXt Char al = " + lookahead);
             char tmp = lookahead;
             lookahead = '\0';
             return tmp + getAlphaNum();
@@ -113,7 +114,6 @@ public class Scanner {
                         lookahead = '\0';
                         return "" + temp;
                     } else if (temp == lookahead) {
-                        temp = lookahead;
                         lookahead = '\0';
                         return temp + "" + temp;
                     } else {
