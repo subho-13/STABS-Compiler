@@ -18,6 +18,89 @@ public class Builder_Type1 {
         this.stack = stack;
     }
 
+    private void setProduction(){
+        setProduction1();
+        setProduction2();
+        setProduction3();
+        setProduction5();
+        setProduction6();
+        setProduction7();
+        setProduction8();
+        setProduction10();
+        setProduction11();
+        setProduction12();
+        setProduction13();
+        setProduction14();
+        setProduction16();
+        setProduction17();
+        setProduction18();
+        setProduction19();
+        setProduction20();
+        setProduction21();
+        setProduction22();
+        setProduction23();
+        setProduction24();
+        setProduction25();
+        setProduction26();
+        setProduction27();
+        setProduction28();
+        setProduction31();
+        setProduction32();
+        setProduction34();
+        setProduction35();
+        setProduction36();
+        setProduction37();
+        setProduction38();
+        setProduction39();
+        setProduction40();
+        setProduction41();
+        setProduction42();
+        setProduction43();
+        setProduction44();
+        setProduction45();
+        setProduction46();
+        setProduction47();
+        setProduction48();
+        setProduction49();
+        setProduction50();
+        setProduction51();
+        setProduction52();
+        setProduction53();
+        setProduction54();
+        setProduction55();
+        setProduction56();
+        setProduction57();
+        setProduction58();
+        setProduction59();
+        setProduction60();
+        setProduction61();
+        setProduction62();
+        setProduction63();
+        setProduction64();
+        setProduction65();
+        setProduction66();
+        setProduction67();
+        setProduction68();
+        setProduction69();
+        setProduction70();
+        setProduction71();
+        setProduction72();
+        setProduction73();
+        setProduction74();
+        setProduction75();
+        setProduction76();
+        setProduction77();
+        setProduction78();
+        setProduction79();
+        setProduction80();
+        setProduction81();
+        setProduction82();
+        setProduction83();
+        setProduction84();
+        setProduction85();
+        setProduction86();
+    }
+
     private void setProduction1() {
         Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
             NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.FUNCTIONS);
@@ -425,21 +508,21 @@ public class Builder_Type1 {
     }
     private void setProduction58(){
         Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
-        NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.MUL_OP);
+        TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.MULTIPLY);
         parserStack.push(stackSymbol1);
         });
         map.put(58, production);
     }
     private void setProduction59(){
         Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
-        NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.MUL_OP);
+        TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.DIVIDE);
         parserStack.push(stackSymbol1);
         });
         map.put(59, production);
     }
     private void setProduction60(){
         Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
-        NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.ADD_OP);
+        TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.ADD);
         parserStack.push(stackSymbol1);
         });
         map.put(60, production);

@@ -303,6 +303,12 @@ public class LexerStateBuilder {
         });
     }
 
+    private  void configureState_28() {
+        state[28].setTokenBuilder((string) -> {
+            Token token = new ReservedToken(Terminal.INCREMENT);
+            return token;
+        });
+    }
     private void configureState_29() {
         state[29].setTokenBuilder((string) -> {
             Token token = new IntToken(Integer.parseInt(string));
@@ -456,4 +462,7 @@ public class LexerStateBuilder {
             return token;
         });
     }
+
+
+
 }
