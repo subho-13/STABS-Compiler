@@ -29,6 +29,9 @@ public class Lexer {
 
         currentToken = currentState.getToken(string);
 
+        // need to set the current state to initial state
+        currentState = startState;
+
         if (scanner.isEOF()) {
             empty = true;
         }
