@@ -3,6 +3,7 @@ package lexer.lexerstate;
 import terminal.Terminal;
 import token.ReservedToken;
 import token.Token;
+import token.valuedtoken.IdentifierToken;
 import token.valuedtoken.IntToken;
 
 import java.util.HashMap;
@@ -24,7 +25,7 @@ public class LexerStateBuilder {
         Map<Character, LexerState>  map = new HashMap<Character, LexerState>();
         state[1].setTransitionMap(map);
         state[1].setTokenBuilder((string) -> {
-            Token token = new ReservedToken(Terminal.IDENTIFIER);
+            Token token = new IdentifierToken("i");
             return token;
         });
     }
@@ -42,7 +43,7 @@ public class LexerStateBuilder {
         Map<Character, LexerState>  map = new HashMap<Character, LexerState>();
         state[3].setTransitionMap(map);
         state[3].setTokenBuilder((string) -> {
-            Token token = new ReservedToken(Terminal.IDENTIFIER);
+            Token token = new IdentifierToken(string);
             return token;
         });
     }
@@ -51,7 +52,7 @@ public class LexerStateBuilder {
         Map<Character, LexerState>  map = new HashMap<Character, LexerState>();
         state[4].setTransitionMap(map);
         state[4].setTokenBuilder((string) -> {
-            Token token = new ReservedToken(Terminal.IDENTIFIER);
+            Token token = new IdentifierToken(string);
             return token;
         });
     }
@@ -60,7 +61,7 @@ public class LexerStateBuilder {
         Map<Character, LexerState>  map = new HashMap<Character, LexerState>();
         state[5].setTransitionMap(map);
         state[5].setTokenBuilder((string) -> {
-            Token token = new ReservedToken(Terminal.IDENTIFIER);
+            Token token = new IdentifierToken(string);
             return token;
         });
     }
@@ -87,7 +88,7 @@ public class LexerStateBuilder {
         Map<Character, LexerState>  map = new HashMap<Character, LexerState>();
         state[8].setTransitionMap(map);
         state[8].setTokenBuilder((string) -> {
-            Token token = new ReservedToken(Terminal.IDENTIFIER);
+            Token token = new IdentifierToken(string);
             return token;
         });
     }
@@ -96,7 +97,7 @@ public class LexerStateBuilder {
         Map<Character, LexerState>  map = new HashMap<Character, LexerState>();
         state[9].setTransitionMap(map);
         state[9].setTokenBuilder((string) -> {
-            Token token = new ReservedToken(Terminal.IDENTIFIER);
+            Token token = new IdentifierToken(string);
             return token;
         });
     }
@@ -105,7 +106,7 @@ public class LexerStateBuilder {
         Map<Character, LexerState>  map = new HashMap<Character, LexerState>();
         state[10].setTransitionMap(map);
         state[10].setTokenBuilder((string) -> {
-            Token token = new ReservedToken(Terminal.IDENTIFIER);
+            Token token = new IdentifierToken(string);
             return token;
         });
     }
@@ -123,7 +124,7 @@ public class LexerStateBuilder {
         Map<Character, LexerState>  map = new HashMap<Character, LexerState>();
         state[12].setTransitionMap(map);
         state[12].setTokenBuilder((string) -> {
-            Token token = new ReservedToken(Terminal.IDENTIFIER);
+            Token token = new IdentifierToken(string);
             return token;
         });
     }
@@ -132,7 +133,7 @@ public class LexerStateBuilder {
         Map<Character, LexerState>  map = new HashMap<Character, LexerState>();
         state[13].setTransitionMap(map);
         state[13].setTokenBuilder((string) -> {
-            Token token = new ReservedToken(Terminal.IDENTIFIER);
+            Token token = new IdentifierToken(string);
             return token;
         });
     }
@@ -141,7 +142,7 @@ public class LexerStateBuilder {
         Map<Character, LexerState>  map = new HashMap<Character, LexerState>();
         state[14].setTransitionMap(map);
         state[14].setTokenBuilder((string) -> {
-            Token token = new ReservedToken(Terminal.IDENTIFIER);
+            Token token = new IdentifierToken(string);
             return token;
         });
     }
@@ -159,7 +160,7 @@ public class LexerStateBuilder {
         Map<Character, LexerState>  map = new HashMap<Character, LexerState>();
         state[16].setTransitionMap(map);
         state[16].setTokenBuilder((string) -> {
-            Token token = new ReservedToken(Terminal.IDENTIFIER);
+            Token token = new IdentifierToken(string);
             return token;
         });
     }
@@ -168,7 +169,7 @@ public class LexerStateBuilder {
         Map<Character, LexerState>  map = new HashMap<Character, LexerState>();
         state[17].setTransitionMap(map);
         state[17].setTokenBuilder((string) -> {
-            Token token = new ReservedToken(Terminal.IDENTIFIER);
+            Token token = new IdentifierToken(string);
             return token;
         });
     }
@@ -177,7 +178,7 @@ public class LexerStateBuilder {
         Map<Character, LexerState>  map = new HashMap<Character, LexerState>();
         state[18].setTransitionMap(map);
         state[18].setTokenBuilder((string) -> {
-            Token token = new ReservedToken(Terminal.IDENTIFIER);
+            Token token = new IdentifierToken(string);
             return token;
         });
     }
@@ -213,7 +214,7 @@ public class LexerStateBuilder {
         Map<Character, LexerState>  map = new HashMap<Character, LexerState>();
         state[22].setTransitionMap(map);
         state[22].setTokenBuilder((string) -> {
-            Token token = new ReservedToken(Terminal.IDENTIFIER);
+            Token token = new IdentifierToken(string);
             return token;
         });
     }
@@ -222,7 +223,7 @@ public class LexerStateBuilder {
         Map<Character, LexerState>  map = new HashMap<Character, LexerState>();
         state[23].setTransitionMap(map);
         state[23].setTokenBuilder((string) -> {
-            Token token = new ReservedToken(Terminal.IDENTIFIER);
+            Token token = new IdentifierToken(string);
             return token;
         });
     }
@@ -231,7 +232,7 @@ public class LexerStateBuilder {
         Map<Character, LexerState>  map = new HashMap<Character, LexerState>();
         state[24].setTransitionMap(map);
         state[24].setTokenBuilder((string) -> {
-            Token token = new ReservedToken(Terminal.IDENTIFIER);
+            Token token = new IdentifierToken(string);
             return token;
         });
     }
