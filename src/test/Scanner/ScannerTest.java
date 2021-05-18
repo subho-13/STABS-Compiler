@@ -12,7 +12,7 @@ public class ScannerTest {
             Scanner scanner = new Scanner(file);
 
             while(!scanner.isEOF()) {
-                System.out.println("->    " + scanner.constructNextString() +  " <-");
+                System.out.println("-> " + scanner.constructNextString() +  " <-");
             }
         } catch (Exception e) {
             e.printStackTrace();
