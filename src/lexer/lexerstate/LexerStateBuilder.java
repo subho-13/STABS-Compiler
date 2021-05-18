@@ -70,6 +70,7 @@ public class LexerStateBuilder {
          configureState_25();
          configureState_26();
          configureState_27();
+         // no config for state 28
          configureState_29();
          configureState_30();
          configureState_31();
@@ -90,14 +91,17 @@ public class LexerStateBuilder {
          configureState_46();
          configureState_47();
          configureState_48();
+         // no config for state 49
          configureState_50();
+         // no config for state 51
          configureState_52();
+         // no config for state 53
          configureState_54();
          configureState_55();
      }
 
     private void configureState_0() {
-        state[0].setTransitionMap(map);
+        //state[0].setTransitionMap(map);
     }
 
     private void configureState_1() {
