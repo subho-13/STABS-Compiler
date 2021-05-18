@@ -17,4 +17,9 @@ public class FloatToken implements ValuedToken<Float> {
     public Float getValue() {
         return value;
     }
+
+    @Override
+    public String toString() {
+        return Terminal.FLOAT_VAL.toString() + value ;
+    }
 }

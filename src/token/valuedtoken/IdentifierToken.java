@@ -18,4 +18,9 @@ public class IdentifierToken implements ValuedToken<String> {
     public String getValue() {
         return value;
     }
+
+    @Override
+    public String toString() {
+        return Terminal.IDENTIFIER.toString() + value ;
+    }
 }

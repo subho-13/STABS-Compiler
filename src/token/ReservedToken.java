@@ -12,4 +12,9 @@ public class ReservedToken implements Token{
     public Terminal getType() {
         return terminal;
     }
+
+    @Override
+    public String toString() {
+        return terminal.toString();
+    }
 }

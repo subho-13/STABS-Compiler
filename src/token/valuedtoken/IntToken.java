@@ -18,4 +18,9 @@ public class IntToken implements ValuedToken<Integer> {
     public Integer getValue() {
         return value;
     }
+
+    @Override
+    public String toString() {
+        return Terminal.INT_VAL.toString() + value ;
+    }
 }

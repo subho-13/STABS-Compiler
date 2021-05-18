@@ -13,6 +13,7 @@ import parser.synchronizer.Synchronizer;
 import terminal.Terminal;
 import token.Token;
 
+import java.io.IOException;
 import java.util.Map;
 
 public class Parser {
@@ -26,7 +27,7 @@ public class Parser {
         return lexer.isEmpty() && parserStack.isEmpty();
     }
 
-    private void handleSymbol(TerminalStackSymbol symbol) {
+    private void handleSymbol(TerminalStackSymbol symbol) throws IOException {
         final Token currentToken = lexer.getCurrentToken();
 
         if(symbol.getTerminal() == currentToken.getType()) {

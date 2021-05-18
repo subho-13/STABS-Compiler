@@ -22,6 +22,10 @@ public class LexerStateBuilder {
         configureStates();
     }
 
+    public LexerState getStartState() {
+        return state[0];
+    }
+
     private void initializeStates() {
         for(int i = 0; i < state.length; i++) {
             state[i] = new LexerState();
@@ -40,8 +44,7 @@ public class LexerStateBuilder {
         }
     }
 
-     public void configureStates() {
-
+     private void configureStates() {
          configureState_0();
          configureState_1();
          configureState_2();
