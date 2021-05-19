@@ -11,6 +11,7 @@ import parser.production.builder.ProductionBuilder;
 import parser.table.FunctionTable;
 import parser.table.SymbolTable;
 import parser.synchronizer.Synchronizer;
+import util.ParseTree.ParseTree;
 
 import java.io.File;
 
@@ -23,7 +24,8 @@ public class ParserTest {
             Lexer lexer = new Lexer(scanner, stateBuilder);
             SymbolTable symbolTable = new SymbolTable();
             FunctionTable functionTable = new FunctionTable();
-            ParserStack parserStack = new ParserStack();
+            ParseTree parseTree = new ParseTree();
+            ParserStack parserStack = new ParserStack(parseTree);
             ProductionBuilder productionBuilder = new ProductionBuilder(parserStack, symbolTable, functionTable);
             Driver driver = new Driver(productionBuilder);
             Synchronizer synchronizer = new Synchronizer();
@@ -32,6 +34,7 @@ public class ParserTest {
             if (functionTable.hasUnresolvedFunctionNames()) {
                 throw new Exception("The following functions are unresolved :: " + functionTable.unresolvedFunctionNames());
             }
+            parseTree.display();
         } catch (Exception e) {
             e.printStackTrace();
         }
