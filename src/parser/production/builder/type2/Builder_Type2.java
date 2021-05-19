@@ -40,7 +40,7 @@ public class Builder_Type2 {
         Production_Type2 production = new Production_Type2(stack, table, (parserTable, symbolTable) -> {
             NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.TYPE);
 
-            TerminalStackSymbol stackSymbol2 = new SpecialTerminalStackSymbol(Terminal.IDENTIFIER, symbolTable, (table, token) -> {
+            TerminalStackSymbol stackSymbol2 = new SpecialTerminalStackSymbol<>(Terminal.IDENTIFIER, symbolTable, (table, token) -> {
                 IdentifierToken identifierToken = (IdentifierToken) token;
                 table.addToFutureScope(identifierToken.getValue());
             });
@@ -53,13 +53,13 @@ public class Builder_Type2 {
 
     private void setProduction15() {
         Production_Type2 production = new Production_Type2(stack, table, (parserTable, symbolTable) -> {
-            TerminalStackSymbol stackSymbol1 = new SpecialTerminalStackSymbol(Terminal.LEFT_CURLY, symbolTable, (table, token) -> {
+            TerminalStackSymbol stackSymbol1 = new SpecialTerminalStackSymbol<SymbolTable>(Terminal.LEFT_CURLY, symbolTable, (table, token) -> {
                table.incrementScope();
             });
 
             NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.STATEMENTS);
 
-            TerminalStackSymbol stackSymbol3 = new SpecialTerminalStackSymbol(Terminal.RIGHT_CURLY, symbolTable, (table, token) -> {
+            TerminalStackSymbol stackSymbol3 = new SpecialTerminalStackSymbol<>(Terminal.RIGHT_CURLY, symbolTable, (table, token) -> {
                 table.decrementScope();
             });
 
@@ -71,7 +71,7 @@ public class Builder_Type2 {
 
     private void setProduction29() {
         Production_Type2 production = new Production_Type2(stack, table, (parserTable, symbolTable) -> {
-            TerminalStackSymbol stackSymbol1 = new SpecialTerminalStackSymbol(Terminal.IDENTIFIER, symbolTable, (table, token) -> {
+            TerminalStackSymbol stackSymbol1 = new SpecialTerminalStackSymbol<SymbolTable>(Terminal.IDENTIFIER, symbolTable, (table, token) -> {
                 IdentifierToken identifierToken = (IdentifierToken) token;
                 String value = identifierToken.getValue();
                 if (table.checkInCurrentScope(value) == true) {
@@ -91,7 +91,7 @@ public class Builder_Type2 {
     private void setProduction30() {
         Production_Type2 production = new Production_Type2(stack, table, (parserTable, symbolTable) -> {
             TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.COMMA);
-            TerminalStackSymbol stackSymbol2 = new SpecialTerminalStackSymbol(Terminal.IDENTIFIER, symbolTable, (table, token) -> {
+            TerminalStackSymbol stackSymbol2 = new SpecialTerminalStackSymbol<SymbolTable>(Terminal.IDENTIFIER, symbolTable, (table, token) -> {
                 IdentifierToken identifierToken = (IdentifierToken) token;
                 String value = identifierToken.getValue();
                 if (table.checkInCurrentScope(value)) {
@@ -110,7 +110,7 @@ public class Builder_Type2 {
 
     private void setProduction33() {
         Production_Type2 production = new Production_Type2(stack, table, (parserTable, symbolTable) -> {
-            TerminalStackSymbol stackSymbol1 = new SpecialTerminalStackSymbol(Terminal.IDENTIFIER, symbolTable, (table, token) -> {
+            TerminalStackSymbol stackSymbol1 = new SpecialTerminalStackSymbol<SymbolTable>(Terminal.IDENTIFIER, symbolTable, (table, token) -> {
                 IdentifierToken identifierToken = (IdentifierToken) token;
                 String value = identifierToken.getValue();
 

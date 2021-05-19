@@ -4,18 +4,18 @@ import parser.table.SymbolTable;
 import terminal.Terminal;
 import token.Token;
 
-public class SpecialTerminalStackSymbol extends TerminalStackSymbol {
-    private final SymbolTable symbolTable;
-    private final TerminalStackSymbolAction action;
+public class SpecialTerminalStackSymbol<T> extends TerminalStackSymbol {
+    private final T table;
+    private final TerminalStackSymbolAction<T> action;
 
-    public SpecialTerminalStackSymbol(final Terminal terminal, SymbolTable symbolTable, TerminalStackSymbolAction action) {
+    public SpecialTerminalStackSymbol(final Terminal terminal, T table, TerminalStackSymbolAction<T> action) {
         super(terminal);
-        this.symbolTable = symbolTable;
+        this.table = table;
         this.action = action;
     }
 
     @Override
     public void applySpecialAction(final Token token) throws Exception {
-        action.apply(symbolTable, token);
+        action.apply(table, token);
     }
 }

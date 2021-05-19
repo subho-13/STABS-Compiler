@@ -14,10 +14,13 @@ public class FunctionTable {
         }
     }
 
-    public void checkFunctionName(String identifier) {
+    public boolean checkFunctionName(String identifier) {
         if (!functionNames.contains(identifier)) {
             pendingNameChecks.add(identifier);
+            return false;
         }
+
+        return true;
     }
 
     public boolean hasUnresolvedFunctionNames() {
