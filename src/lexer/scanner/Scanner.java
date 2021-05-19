@@ -61,7 +61,7 @@ public class Scanner {
             }
         }
 
-        if (Character.isLetterOrDigit(lookahead)) {
+        if (Character.isLetterOrDigit(lookahead) || lookahead == '.') {
             char tmp = lookahead;
             lookahead = '\0';
             return tmp + getAlphaNum();
@@ -140,7 +140,7 @@ public class Scanner {
         StringBuilder stringBuilder = new StringBuilder();
         while(!isEOF()) {
             char temp = getNextChar();
-            if (Character.isLetterOrDigit(temp)) {
+            if (Character.isLetterOrDigit(temp) || temp == '.') {
                 stringBuilder.append(temp);
             } else if (!Character.isWhitespace(temp)) {
                 lookahead = '\0';

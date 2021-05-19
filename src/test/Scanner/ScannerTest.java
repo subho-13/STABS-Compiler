@@ -14,9 +14,13 @@ public class ScannerTest {
             Scanner scanner = new Scanner(file);
             LexerStateBuilder stateBuilder = new LexerStateBuilder(new StateMapping());
             Lexer lexer = new Lexer(scanner, stateBuilder);
-            while(!lexer.isEmpty()) {
-                lexer.parseNextToken();
-                System.out.println(lexer.getCurrentToken() + " " + lexer.getCurrentLineNum());
+//            while(!lexer.isEmpty()) {
+//                lexer.parseNextToken();
+//                System.out.println(lexer.getCurrentToken() + " " + lexer.getCurrentLineNum());
+//            }
+
+            while(!scanner.isEOF()) {
+                System.out.println(scanner.getNextString());
             }
         } catch (Exception e) {
             e.printStackTrace();
