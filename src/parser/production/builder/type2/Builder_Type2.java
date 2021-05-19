@@ -42,7 +42,12 @@ public class Builder_Type2 {
 
             TerminalStackSymbol stackSymbol2 = new SpecialTerminalStackSymbol<>(Terminal.IDENTIFIER, symbolTable, (table, token) -> {
                 IdentifierToken identifierToken = (IdentifierToken) token;
-                table.addToFutureScope(identifierToken.getValue());
+                String value = identifierToken.getValue();
+                if (table.checkInFutureScope(value)) {
+                    throw new Exception(value + " already present as a parameter");
+                } else {
+                    table.addToFutureScope(identifierToken.getValue());
+                }
             });
 
             parserTable.push(stackSymbol1, stackSymbol2);

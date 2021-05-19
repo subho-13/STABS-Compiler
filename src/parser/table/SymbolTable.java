@@ -6,10 +6,13 @@ import java.util.*;
 
 public class SymbolTable {
     Stack<Set<String>> table = new Stack<>();
-    List<String> toBeAdded = new ArrayList<String>();
+    Set<String> toBeAdded = new HashSet<>();
 
     public void addToFutureScope(String identifier) {
         toBeAdded.add(identifier);
+    }
+    public boolean checkInFutureScope(String identifier) {
+        return toBeAdded.contains(identifier);
     }
 
     public void incrementScope() {
