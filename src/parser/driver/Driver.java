@@ -352,10 +352,10 @@ public class Driver {
         map.put(NonTerminal.REL_OP, new HashMap<Terminal, Production>());
         map.get(NonTerminal.REL_OP).put(Terminal.EQUALS, productionBuilder.getProduction(62));
         map.get(NonTerminal.REL_OP).put(Terminal.NOT_EQ, productionBuilder.getProduction(63));
-        map.get(NonTerminal.REL_OP).put(Terminal.GREATER, productionBuilder.getProduction(64));
-        map.get(NonTerminal.REL_OP).put(Terminal.GREATER_EQ, productionBuilder.getProduction(65));
-        map.get(NonTerminal.REL_OP).put(Terminal.LESSER, productionBuilder.getProduction(66));
-        map.get(NonTerminal.REL_OP).put(Terminal.LESSER_EQ, productionBuilder.getProduction(67));
+        map.get(NonTerminal.REL_OP).put(Terminal.LESSER, productionBuilder.getProduction(64));
+        map.get(NonTerminal.REL_OP).put(Terminal.LESSER_EQ, productionBuilder.getProduction(65));
+        map.get(NonTerminal.REL_OP).put(Terminal.GREATER, productionBuilder.getProduction(66));
+        map.get(NonTerminal.REL_OP).put(Terminal.GREATER_EQ, productionBuilder.getProduction(67));
     }
 
     private void addMappingForAND_OP(){
@@ -430,8 +430,8 @@ public class Driver {
         map.put(NonTerminal.F, new HashMap<Terminal, Production>());
         map.get(NonTerminal.F).put(Terminal.IDENTIFIER, productionBuilder.getProduction(76));
         map.get(NonTerminal.F).put(Terminal.LEFT_PARA, productionBuilder.getProduction(77));
-        map.get(NonTerminal.F).put(Terminal.FLOAT_VAL, productionBuilder.getProduction(78));
-        map.get(NonTerminal.F).put(Terminal.INT_VAL, productionBuilder.getProduction(79));
+        map.get(NonTerminal.F).put(Terminal.INT_VAL, productionBuilder.getProduction(78));
+        map.get(NonTerminal.F).put(Terminal.FLOAT_VAL, productionBuilder.getProduction(79));
     }
 
     private void addMappingForBOOL_EXPR(){
