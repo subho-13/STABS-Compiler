@@ -24,11 +24,7 @@ public class Builder_Type1 {
         return map;
     }
 
-    private void setAllProduction() {
-        setProduction1();
-    }
-
-    private void setProduction(){
+    private void setAllProduction(){
         setProduction1();
         setProduction2();
         setProduction3();

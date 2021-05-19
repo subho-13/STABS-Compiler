@@ -22,6 +22,7 @@ public class Builder_Type2 {
     public Builder_Type2(ParserStack stack, SymbolTable table) {
         this.stack = stack;
         this.table = table;
+        setAllProductions();
     }
 
     public Map<Integer, Production_Type2> getMap() {
