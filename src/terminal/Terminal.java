@@ -17,5 +17,6 @@ public enum Terminal {
     FOR,
     INPUT, PRINT,
     RETURN,
-    INT_VAL, FLOAT_VAL, IDENTIFIER
+    INT_VAL, FLOAT_VAL, IDENTIFIER,
+
 }
