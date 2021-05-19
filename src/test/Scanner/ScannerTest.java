@@ -16,7 +16,7 @@ public class ScannerTest {
             Lexer lexer = new Lexer(scanner, stateBuilder);
             while(!lexer.isEmpty()) {
                 lexer.parseNextToken();
-                System.out.println(lexer.getCurrentToken());
+                System.out.println(lexer.getCurrentToken() + " " + lexer.getCurrentLineNum());
             }
         } catch (Exception e) {
             e.printStackTrace();
