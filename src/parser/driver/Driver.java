@@ -228,6 +228,7 @@ public class Driver {
         map.get(NonTerminal.VARIABLE_OPT).put(Terminal.LEFT_CURLY, productionBuilder.getProduction(35));
         map.get(NonTerminal.VARIABLE_OPT).put(Terminal.RIGHT_CURLY, productionBuilder.getProduction(35));
         map.get(NonTerminal.VARIABLE_OPT).put(Terminal.OR, productionBuilder.getProduction(35));
+        map.get(NonTerminal.VARIABLE_OPT).put(Terminal.SEMICOLON, productionBuilder.getProduction(35));
     }
 
     private void addMappingForVALUE(){
