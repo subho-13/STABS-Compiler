@@ -21,7 +21,7 @@ public class TerminalStackSymbol implements StackSymbol {
         return terminal;
     }
 
-    public void applySpecialAction(Token token) {}
+    public void applySpecialAction(Token token) throws Exception {}
 
     @Override
     public String toString() {

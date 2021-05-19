@@ -44,7 +44,7 @@ public class Parser {
         return lexer.isEmpty() && parserStack.isEmpty();
     }
 
-    private void handleSymbol(TerminalStackSymbol symbol) throws IOException {
+    private void handleSymbol(TerminalStackSymbol symbol) throws Exception {
         final Token currentToken = lexer.getCurrentToken();
 
         if(symbol.getTerminal() == currentToken.getType()) {

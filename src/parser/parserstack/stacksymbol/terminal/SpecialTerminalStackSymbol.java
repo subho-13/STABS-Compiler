@@ -15,7 +15,7 @@ public class SpecialTerminalStackSymbol extends TerminalStackSymbol {
     }
 
     @Override
-    public void applySpecialAction(final Token token) {
+    public void applySpecialAction(final Token token) throws Exception {
         action.apply(symbolTable, token);
     }
 }

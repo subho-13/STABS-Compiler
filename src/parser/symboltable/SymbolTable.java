@@ -26,12 +26,13 @@ public class SymbolTable {
 
     public void addToCurrentScope(String identifier) {
         Set<String> topScope = table.peek();
+        System.out.println("SymbolTable : " + identifier);
         topScope.add(identifier);
     }
 
     public boolean check(String identifier) {
-        for (Set scope: table) {
-            if (scope.contains(identifier) == true) {
+        for (Set<String> scope: table) {
+            if (scope.contains(identifier)) {
                 return true;
             }
         }

@@ -1,13 +1,15 @@
 int main() {
     int a, b;
     a = {1, 2, 3};
-    a[1] = 2*3;
 
-    for a > a[2*4] {
+    for a > 2 {
         input b;
         for a > 2 {
             input b;
-            (2)c;
+            int c;
+            if b > 3 {
+             c = 0 - 10;
+            }
         }
     }
 }
@@ -20,6 +22,10 @@ int main() {
         input b;
         for a > 2 {
             input b;
+            int c;
+            if b > 3 {
+             c = 10;
+            }
         }
     }
 }

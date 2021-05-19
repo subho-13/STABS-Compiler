@@ -63,8 +63,6 @@ public class Scanner {
                     if (Character.isWhitespace(temp)) {
                         lookahead = '\0';
                         return "+";
-                    } else if (Character.isDigit(temp)) {
-                        return "+" + temp + getAlphaNum();
                     } else if (temp == '+') {
                         lookahead = '\0';
                         return "++";
@@ -79,8 +77,6 @@ public class Scanner {
                     if (Character.isWhitespace(temp)) {
                         lookahead = '\0';
                         return "-";
-                    } else if (Character.isDigit(temp)) {
-                        return "-" + temp + getAlphaNum();
                     } else if (temp == '-') {
                         lookahead = '\0';
                         return "--";

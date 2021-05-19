@@ -76,7 +76,7 @@ public class Builder_Type2 {
                 IdentifierToken identifierToken = (IdentifierToken) token;
                 String value = identifierToken.getValue();
                 if (table.check(value) == true) {
-                    // Throw some error
+                    throw new Exception("Identifier " + value + " present in scope");
                 } else {
                     table.addToCurrentScope(value);
                 }
@@ -96,7 +96,7 @@ public class Builder_Type2 {
                 IdentifierToken identifierToken = (IdentifierToken) token;
                 String value = identifierToken.getValue();
                 if (table.check(value)) {
-                    // Throw some error
+                    throw new Exception("Identifier " + value + " present in scope");
                 } else {
                     table.addToCurrentScope(value);
                 }
@@ -115,8 +115,8 @@ public class Builder_Type2 {
                 IdentifierToken identifierToken = (IdentifierToken) token;
                 String value = identifierToken.getValue();
 
-                if (table.check(value) == false) {
-                    // throw some error
+                if (!table.check(value)) {
+                    throw new Exception("Identifier " + value + " not present in scope");
                 }
             });
 
