@@ -6,7 +6,7 @@ import parser.parserstack.stacksymbol.nonterminal.NonTerminalStackSymbol;
 import parser.parserstack.stacksymbol.terminal.TerminalStackSymbol;
 import parser.parserstack.stacksymbol.terminal.SpecialTerminalStackSymbol;
 import parser.production.type.type2.Production_Type2;
-import parser.symboltable.SymbolTable;
+import parser.table.SymbolTable;
 import terminal.Terminal;
 import token.valuedtoken.IdentifierToken;
 

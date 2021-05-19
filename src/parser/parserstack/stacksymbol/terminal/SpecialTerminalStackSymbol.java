@@ -1,6 +1,6 @@
 package parser.parserstack.stacksymbol.terminal;
 
-import parser.symboltable.SymbolTable;
+import parser.table.SymbolTable;
 import terminal.Terminal;
 import token.Token;
 

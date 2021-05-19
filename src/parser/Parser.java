@@ -9,13 +9,10 @@ import parser.parserstack.stacksymbol.StackSymbolType;
 import parser.parserstack.stacksymbol.nonterminal.NonTerminalStackSymbol;
 import parser.parserstack.stacksymbol.terminal.TerminalStackSymbol;
 import parser.production.Production;
-import parser.symboltable.SymbolTable;
+import parser.table.SymbolTable;
 import parser.synchronizer.Synchronizer;
 import terminal.Terminal;
 import token.Token;
-
-import java.io.IOException;
-import java.util.Map;
 
 public class Parser {
     ParserStack parserStack;

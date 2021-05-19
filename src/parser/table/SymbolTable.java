@@ -1,4 +1,4 @@
-package parser.symboltable;
+package parser.table;
 
 import lexer.lexerstate.StateMapping;
 

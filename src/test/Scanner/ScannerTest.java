@@ -1,15 +1,11 @@
 package test.Scanner;
 
 import lexer.Lexer;
-import lexer.lexerstate.LexerState;
 import lexer.lexerstate.LexerStateBuilder;
 import lexer.lexerstate.StateMapping;
 import lexer.scanner.Scanner;
-import parser.driver.Driver;
-import parser.symboltable.SymbolTable;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 
 public class ScannerTest {
     public static  void main(String[] args) {
