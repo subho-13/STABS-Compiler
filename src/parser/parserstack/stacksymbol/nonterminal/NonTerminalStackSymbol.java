@@ -19,4 +19,11 @@ public class NonTerminalStackSymbol implements StackSymbol {
     public NonTerminal getNonTerminalType() {
         return nonTerminal;
     }
+
+    @Override
+    public String toString() {
+        return "NonTerminalStackSymbol{" +
+                "nonTerminal=" + nonTerminal +
+                '}';
+    }
 }

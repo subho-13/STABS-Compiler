@@ -11,7 +11,7 @@ public class ParserStack {
         Collections.reverse(Arrays.asList(stackSymbols));
         for(StackSymbol symbol: stackSymbols) {
             stack.push(symbol);
-            System.out.println(symbol);
+            System.out.println("PUSH: " + symbol);
         }
     }
 
@@ -21,6 +21,7 @@ public class ParserStack {
 
     public StackSymbol pop() {
         StackSymbol symbol = stack.pop();
+        System.out.println("POP: " + symbol);
         if (symbol == null) {
             // Throw Exception
         }

@@ -22,4 +22,11 @@ public class TerminalStackSymbol implements StackSymbol {
     }
 
     public void applySpecialAction(Token token) {}
+
+    @Override
+    public String toString() {
+        return "TerminalStackSymbol{" +
+                "terminal=" + terminal +
+                '}';
+    }
 }

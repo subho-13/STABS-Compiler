@@ -28,6 +28,7 @@ public class Builder_Type1 {
         setProduction1();
         setProduction2();
         setProduction3();
+        setProduction4();
         setProduction5();
         setProduction6();
         setProduction7();
@@ -324,7 +325,7 @@ public class Builder_Type1 {
         Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
             NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.TYPE);
             NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.IDENTIFIERS);
-            parserStack.push(stackSymbol1);
+            parserStack.push(stackSymbol1, stackSymbol2);
         });
         map.put(28, production);
     }
@@ -338,7 +339,7 @@ public class Builder_Type1 {
             NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.VARIABLE);
             TerminalStackSymbol stackSymbol2 = new TerminalStackSymbol(Terminal.ASSIGN);
             NonTerminalStackSymbol stackSymbol3 = new NonTerminalStackSymbol(NonTerminal.VALUE);
-            parserStack.push(stackSymbol1);
+            parserStack.push(stackSymbol1, stackSymbol2, stackSymbol3);
         });
         map.put(32, production);
     }
@@ -359,8 +360,8 @@ public class Builder_Type1 {
     }
     private void setProduction36(){
         Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
-        NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.ARRAY);
-        parserStack.push(stackSymbol1);
+            NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.ARRAY);
+            parserStack.push(stackSymbol1);
         });
         map.put(36, production);
     }

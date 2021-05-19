@@ -28,10 +28,6 @@ public class ProductionBuilder {
         for(Map.Entry<Integer, Production_Type2> entry: builder_type2.getMap().entrySet()) {
             map.put(entry.getKey(), entry.getValue());
         }
-
-        for(Map.Entry<Integer, Production> entry: map.entrySet()) {
-            System.out.println(entry.getKey() + entry.getValue().hashCode());
-        }
     }
 
     public ProductionBuilder(ParserStack parserStack, SymbolTable symbolTable) {
