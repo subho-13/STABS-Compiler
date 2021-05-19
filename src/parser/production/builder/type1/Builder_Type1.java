@@ -405,7 +405,7 @@ public class Builder_Type1 {
     }
     private void setProduction42(){
         Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
-        NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.INC_DEC_STMT);
+        TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.INCREMENT);
         NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.VARIABLE);
         parserStack.push(stackSymbol1, stackSymbol2);
         });
@@ -413,7 +413,7 @@ public class Builder_Type1 {
     }
     private void setProduction43(){
         Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
-        NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.INC_DEC_STMT);
+        TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.DECREMENT);
         NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.VARIABLE);
         parserStack.push(stackSymbol1, stackSymbol2);
         });
@@ -421,17 +421,17 @@ public class Builder_Type1 {
     }
     private void setProduction44(){
         Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
-            TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.PRINT);
-            NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.NUM_EXPR);
-            parserStack.push(stackSymbol1, stackSymbol2);
+        TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.PRINT);
+        NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.NUM_EXPR);
+        parserStack.push(stackSymbol1, stackSymbol2);
         });
         map.put(44, production);
     }
     private void setProduction45(){
         Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
-            TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.INPUT);
-            NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.VARIABLE);
-            parserStack.push(stackSymbol1, stackSymbol2);
+        TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.INPUT);
+        NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.VARIABLE);
+        parserStack.push(stackSymbol1, stackSymbol2);
         });
         map.put(45, production);
     }
@@ -448,9 +448,9 @@ public class Builder_Type1 {
     }
     private void setProduction47(){
         Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
-            TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.ELSE);
-            NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.BLOCK);
-            parserStack.push(stackSymbol1, stackSymbol2);
+        TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.ELSE);
+        NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.BLOCK);
+        parserStack.push(stackSymbol1, stackSymbol2);
         });
         map.put(47, production);
     }
@@ -461,18 +461,18 @@ public class Builder_Type1 {
     }
     private void setProduction49(){
         Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
-            TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.FOR);
-            NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.BOOL_EXPR);
-            NonTerminalStackSymbol stackSymbol3 = new NonTerminalStackSymbol(NonTerminal.BLOCK);
-            parserStack.push(stackSymbol1, stackSymbol2, stackSymbol3);
+        TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.FOR);
+        NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.BOOL_EXPR);
+        NonTerminalStackSymbol stackSymbol3 = new NonTerminalStackSymbol(NonTerminal.BLOCK);
+        parserStack.push(stackSymbol1, stackSymbol2, stackSymbol3);
         });
         map.put(49, production);
     }
     private void setProduction50(){
         Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
-            TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.RETURN);
-            NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.VARIABLE);
-            parserStack.push(stackSymbol1, stackSymbol2);
+        TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.RETURN);
+        NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.VARIABLE);
+        parserStack.push(stackSymbol1, stackSymbol2);
         });
         map.put(50, production);
     }
