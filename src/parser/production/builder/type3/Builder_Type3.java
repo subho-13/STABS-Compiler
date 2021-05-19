@@ -4,7 +4,6 @@ import jdk.incubator.foreign.LibraryLookup;
 import parser.parserstack.ParserStack;
 import parser.production.type.type2.Production_Type2;
 import parser.production.type.type3.Production_Type3;
-import parser.symboltable.SymbolTable;
 import parser.table.FunctionTable;
 
 import java.util.HashMap;
