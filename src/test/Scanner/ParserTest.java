@@ -8,7 +8,7 @@ import parser.Parser;
 import parser.driver.Driver;
 import parser.parserstack.ParserStack;
 import parser.production.builder.ProductionBuilder;
-import parser.symboltable.SymbolTable;
+import parser.table.SymbolTable;
 import parser.synchronizer.Synchronizer;
 
 import java.io.File;

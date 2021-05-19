@@ -1,13 +1,12 @@
 package parser.production.builder;
 
-import lexer.Lexer;
 import parser.parserstack.ParserStack;
 import parser.production.Production;
 import parser.production.builder.type1.Builder_Type1;
 import parser.production.builder.type2.Builder_Type2;
 import parser.production.type.type1.Production_Type1;
 import parser.production.type.type2.Production_Type2;
-import parser.symboltable.SymbolTable;
+import parser.table.SymbolTable;
 
 import java.util.HashMap;
 import java.util.Map;
