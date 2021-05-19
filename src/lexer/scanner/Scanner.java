@@ -10,6 +10,7 @@ public class Scanner {
     char lookahead;
     String currentString;
     private boolean eof = false;
+    static int lineNum = 1;
 
     public boolean isEOF() {
         return eof;
@@ -27,6 +28,10 @@ public class Scanner {
             eof = true;
         }
 
+        if (c == '\n') {
+            lineNum++;
+        }
+
         return (char) c;
     }
 
@@ -42,6 +47,10 @@ public class Scanner {
                 break;
             }
         }
+    }
+
+    public int getNextLineNum() {
+        return lineNum;
     }
 
     public String getNextString() throws IOException {
