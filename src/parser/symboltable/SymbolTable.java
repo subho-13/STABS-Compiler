@@ -1,9 +1,11 @@
 package parser.symboltable;
 
+import lexer.lexerstate.StateMapping;
+
 import java.util.*;
 
 public class SymbolTable {
-    Queue<Set<String>> table = new LinkedList<>();
+    Stack<Set<String>> table = new Stack<>();
     List<String> toBeAdded = new ArrayList<String>();
 
     public void addToFutureScope(String identifier) {
@@ -21,7 +23,7 @@ public class SymbolTable {
     }
 
     public void decrementScope() {
-        table.remove();
+        table.pop();
     }
 
     public void addToCurrentScope(String identifier) {
@@ -30,7 +32,7 @@ public class SymbolTable {
         topScope.add(identifier);
     }
 
-    public boolean check(String identifier) {
+    public boolean checkInAllScopes(String identifier) {
         for (Set<String> scope: table) {
             if (scope.contains(identifier)) {
                 return true;
@@ -38,5 +40,11 @@ public class SymbolTable {
         }
 
         return false;
+    }
+
+    public boolean checkInCurrentScope(String identifier) {
+        Set<String> topScope = table.peek();
+        System.out.println(topScope);
+        return topScope.contains(identifier);
     }
 }

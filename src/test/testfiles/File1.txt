@@ -1,31 +1,11 @@
 int main() {
-    int a, b;
-    a = {1, 2, 3};
-
-    for a > 2 {
-        input b;
-        for a > 2 {
-            input b;
-            int c;
-            if b > 3 {
-                c = 0 - 10;
-            }
-        }
+    float c;
+    {
+        int c;
+        ()a;
     }
 }
 
-int main() {
-    int a, b;
-    a = {1, 2, 3};
+int a() {
 
-    for a > 2 {
-        input b;
-        for a > 2 {
-            input b;
-            int c;
-            if b > 3 {
-             c = 10;
-            }
-        }
-    }
 }

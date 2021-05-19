@@ -8,7 +8,6 @@ import parser.parserstack.stacksymbol.terminal.SpecialTerminalStackSymbol;
 import parser.production.type.type2.Production_Type2;
 import parser.symboltable.SymbolTable;
 import terminal.Terminal;
-import token.Token;
 import token.valuedtoken.IdentifierToken;
 
 import java.util.HashMap;
@@ -75,8 +74,8 @@ public class Builder_Type2 {
             TerminalStackSymbol stackSymbol1 = new SpecialTerminalStackSymbol(Terminal.IDENTIFIER, symbolTable, (table, token) -> {
                 IdentifierToken identifierToken = (IdentifierToken) token;
                 String value = identifierToken.getValue();
-                if (table.check(value) == true) {
-                    throw new Exception("Identifier " + value + " present in scope");
+                if (table.checkInCurrentScope(value) == true) {
+                    throw new Exception("Identifier " + value + " present in current scope");
                 } else {
                     table.addToCurrentScope(value);
                 }
@@ -95,8 +94,8 @@ public class Builder_Type2 {
             TerminalStackSymbol stackSymbol2 = new SpecialTerminalStackSymbol(Terminal.IDENTIFIER, symbolTable, (table, token) -> {
                 IdentifierToken identifierToken = (IdentifierToken) token;
                 String value = identifierToken.getValue();
-                if (table.check(value)) {
-                    throw new Exception("Identifier " + value + " present in scope");
+                if (table.checkInCurrentScope(value)) {
+                    throw new Exception("Identifier " + value + " present in current scope");
                 } else {
                     table.addToCurrentScope(value);
                 }
@@ -115,7 +114,7 @@ public class Builder_Type2 {
                 IdentifierToken identifierToken = (IdentifierToken) token;
                 String value = identifierToken.getValue();
 
-                if (!table.check(value)) {
+                if (!table.checkInAllScopes(value)) {
                     throw new Exception("Identifier " + value + " not present in scope");
                 }
             });
