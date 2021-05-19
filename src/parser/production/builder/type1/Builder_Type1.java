@@ -5,6 +5,7 @@ import parser.parserstack.ParserStack;
 import parser.parserstack.stacksymbol.nonterminal.NonTerminalStackSymbol;
 import parser.parserstack.stacksymbol.terminal.TerminalStackSymbol;
 import parser.production.type.type1.Production_Type1;
+import parser.production.type.type2.Production_Type2;
 import terminal.Terminal;
 
 import java.util.HashMap;
@@ -16,6 +17,15 @@ public class Builder_Type1 {
 
     public Builder_Type1(ParserStack stack) {
         this.stack = stack;
+        setAllProduction();
+    }
+
+    public Map<Integer, Production_Type1> getMap() {
+        return map;
+    }
+
+    private void setAllProduction() {
+        setProduction1();
     }
 
     private void setProduction1() {
@@ -45,6 +55,20 @@ public class Builder_Type1 {
         });
 
         map.put(3, production);
+    }
+
+    private void setProduction4() {
+        Production_Type1 production  = new Production_Type1(stack, (parserTable) -> {
+            NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.TYPE);
+            TerminalStackSymbol stackSymbol2 = new TerminalStackSymbol(Terminal.IDENTIFIER);
+            TerminalStackSymbol stackSymbol3 = new TerminalStackSymbol(Terminal.LEFT_PARA);
+            NonTerminalStackSymbol stackSymbol4 = new NonTerminalStackSymbol(NonTerminal.PARAMETERS);
+            TerminalStackSymbol stackSymbol5 = new TerminalStackSymbol(Terminal.RIGHT_PARA);
+            NonTerminalStackSymbol stackSymbol6 = new NonTerminalStackSymbol(NonTerminal.BLOCK);
+            parserTable.push(stackSymbol1, stackSymbol2, stackSymbol3, stackSymbol4, stackSymbol5, stackSymbol6);
+        });
+
+        map.put(4, production);
     }
 
     private void setProduction5(){

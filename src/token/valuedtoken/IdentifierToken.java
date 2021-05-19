@@ -21,6 +21,6 @@ public class IdentifierToken implements ValuedToken<String> {
 
     @Override
     public String toString() {
-        return Terminal.IDENTIFIER.toString() + value ;
+        return Terminal.IDENTIFIER.toString() + " " + value ;
     }
 }

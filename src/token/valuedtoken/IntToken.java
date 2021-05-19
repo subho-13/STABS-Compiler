@@ -21,6 +21,6 @@ public class IntToken implements ValuedToken<Integer> {
 
     @Override
     public String toString() {
-        return Terminal.INT_VAL.toString() + value ;
+        return Terminal.INT_VAL.toString() + " " + value ;
     }
 }

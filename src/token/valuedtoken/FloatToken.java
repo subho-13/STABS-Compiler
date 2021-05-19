@@ -20,6 +20,6 @@ public class FloatToken implements ValuedToken<Float> {
 
     @Override
     public String toString() {
-        return Terminal.FLOAT_VAL.toString() + value ;
+        return Terminal.FLOAT_VAL.toString() + " " + value ;
     }
 }
