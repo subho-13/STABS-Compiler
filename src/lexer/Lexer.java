@@ -33,6 +33,7 @@ public class Lexer {
         }
 
         LexerState currentState = startState;
+        System.out.println(string);
 
         for(char c: string.toCharArray()) {
             currentState = currentState.move(c);

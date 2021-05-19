@@ -49,7 +49,9 @@ public class Parser {
 
         if(symbol.getTerminal() == currentToken.getType()) {
             symbol.applySpecialAction(currentToken);
-            lexer.parseNextToken();
+            if (!lexer.isEmpty()) {
+                lexer.parseNextToken();
+            }
             System.out.println("Current Token: " + lexer.getCurrentToken());
         } else {
             // handle error
