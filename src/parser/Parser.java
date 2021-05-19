@@ -53,9 +53,6 @@ public class Parser {
             if (!lexer.isEmpty()) {
                 lexer.parseNextToken();
             }
-            System.out.println("Current Token: " + lexer.getCurrentToken());
-        } else {
-            // handle error
         }
     }
 

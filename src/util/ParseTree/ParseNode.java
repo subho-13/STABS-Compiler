@@ -7,6 +7,7 @@ import java.util.Queue;
 
 public class ParseNode {
     private String symbol;
+
     public ParseNode(String symbol) {
         this.symbol = symbol;
     }

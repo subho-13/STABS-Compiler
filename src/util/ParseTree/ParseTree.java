@@ -2,10 +2,14 @@ package util.ParseTree;
 
 import parser.parserstack.ParserStack;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
 public class ParseTree {
     ParseNode root = new ParseNode("Root");
+
     ParseNode lastAccessed = root;
     Stack<ParseNode> stackNodes = new Stack<>();
 
@@ -34,23 +38,26 @@ public class ParseTree {
         return root;
     }
 
-    public void display() {
-        printTree(root, new HashSet<>(), 0, false);
+    public void display() throws IOException {
+        File file = new File("src/ParseTree.txt");
+        FileWriter fileWriter = new FileWriter(file);
+        printTree(root, new HashSet<>(), 0, false, fileWriter);
+        fileWriter.close();
     }
 
-    public void printTree(ParseNode root, Set<Integer> flag, int depth, boolean isLast) {
+    public void printTree(ParseNode root, Set<Integer> flag, int depth, boolean isLast, FileWriter writer) throws IOException {
         if (root == null) {
             return;
         }
 
         for (int i = 1; i < depth; ++i) {
             if (flag.contains(i)) {
-                System.out.print("  "
+                writer.write("| "
                         + " "
                         + " "
                         + " ");
             } else {
-                System.out.print("| "
+                writer.write(" "
                         + " "
                         + " "
                         + " ");
@@ -58,19 +65,19 @@ public class ParseTree {
         }
 
             if (depth == 0) {
-                System.out.println(root.getSymbol());
+                writer.write(root.getSymbol() + '\n');
             } else if (isLast) {
-                System.out.print("+--- " +  root.getSymbol() + '\n');
+                writer.write("+--- " +  root.getSymbol() + '\n');
                 flag.remove(depth);
             } else {
-                System.out.print("+--- " +  root.getSymbol() + '\n');
+                writer.write("+--- " +  root.getSymbol() + '\n');
             }
 
             int it = 0;
             Queue<ParseNode> queue = root.getParseNodeQueue();
             for (ParseNode node : queue) {
                 ++it;
-                printTree(node, flag, depth + 1, it == (queue.size()) - 1 );
+                printTree(node, flag, depth + 1, it == (queue.size()) - 1, writer );
             }
         flag.add(depth);
     }

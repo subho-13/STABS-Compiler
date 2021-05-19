@@ -18,7 +18,6 @@ public class Driver {
     }
 
     public Production getProduction(NonTerminal nonTerminal, Terminal terminal)  {
-        System.out.println("Inside Driver :- " + nonTerminal.toString() + ", " + terminal.toString());
         Production production = map.get(nonTerminal).get(terminal);
 
         if (production == null) {

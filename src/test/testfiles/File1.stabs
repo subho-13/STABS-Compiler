@@ -1,10 +1,12 @@
-int nestedIf() {
+int main() {
     int a;
     a = 5;
-    if a > 2 {
-        if a > 3 {
-            if a > 4 {
-            }
-        }
+    (a)func;
+}
+int func(int a) {
+    {
+        int a;
+        a = 7;
     }
+    a = 6;
 }
