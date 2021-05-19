@@ -6,11 +6,12 @@ import parser.parserstack.stacksymbol.StackSymbol;
 import java.util.*;
 
 public class ParserStack {
-    private Stack<StackSymbol> stack;
+    private Stack<StackSymbol> stack = new Stack<>();
     public void push(StackSymbol...stackSymbols) {
         Collections.reverse(Arrays.asList(stackSymbols));
         for(StackSymbol symbol: stackSymbols) {
             stack.push(symbol);
+            System.out.println(symbol);
         }
     }
 

@@ -15,9 +15,11 @@ public class Driver {
 
     public Driver(ProductionBuilder productionBuilder) {
         this.productionBuilder = productionBuilder;
+        addMapping();
     }
 
     public Production getProduction(NonTerminal nonTerminal, Terminal terminal)  {
+        System.out.println("Inside Driver :- " + nonTerminal.toString() + ", " + terminal.toString());
         Production production = map.get(nonTerminal).get(terminal);
 
         if (production == null) {
@@ -25,6 +27,58 @@ public class Driver {
         }
 
         return production;
+    }
+
+    private void addMapping() {
+        addMappingForPROGRAM();
+        addMappingForFUNCTIONS();
+        addMappingForFUNCTION();
+        addMappingForPARAMETERS();
+        addMappingForOTHER_PARAMS();
+        addMappingForPARAMETER();
+        addMappingForTYPE();
+        addMappingForTYPE_PART_1();
+        addMappingForTYPE_PART_2();
+        addMappingForBLOCK();
+        addMappingForSTATEMENTS();
+        addMappingForSTATEMENT();
+        addMappingForCOMPOUND_STMT();
+        addMappingForDECLARATION();
+        addMappingForIDENTIFIERS();
+        addMappingForOTHER_IDS();
+        addMappingForASSIGNMENT();
+        addMappingForVARIABLE();
+        addMappingForVARIABLE_OPT();
+        addMappingForVALUE();
+        addMappingForARRAY();
+        addMappingForARRAY_ELEMS();
+        addMappingForOTHER_ELEMS();
+        addMappingForINC_DEC_STMT();
+        addMappingForIO_STMT();
+        addMappingForIF_STMT();
+        addMappingForELSE_STMT();
+        addMappingForFOR_STMT();
+        addMappingForRETURN_STMT();
+        addMappingForFUNCTION_STMT();
+        addMappingForFUNC_EXPR();
+        addMappingForARGUMENTS();
+        addMappingForOTHER_ARGS();
+        addMappingForARGUMENT();
+        addMappingForMUL_OP();
+        addMappingForADD_OP();
+        addMappingForREL_OP();
+        addMappingForAND_OP();
+        addMappingForOR_OP();
+        addMappingForNUM_EXPR();
+        addMappingForN_();
+        addMappingForT();
+        addMappingForT_();
+        addMappingForF();
+        addMappingForBOOL_EXPR();
+        addMappingForB_();
+        addMappingForX();
+        addMappingForX_();
+        addMappingForY();
     }
 
     private void addMappingForPROGRAM(){

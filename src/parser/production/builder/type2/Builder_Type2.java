@@ -15,13 +15,25 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Builder_Type2 {
-    ParserStack stack;
-    SymbolTable table;
-    Map<Integer, Production_Type2> map = new HashMap<>();
+    private  ParserStack stack;
+    private  SymbolTable table;
+    private  Map<Integer, Production_Type2> map = new HashMap<>();
 
     public Builder_Type2(ParserStack stack, SymbolTable table) {
         this.stack = stack;
         this.table = table;
+    }
+
+    public Map<Integer, Production_Type2> getMap() {
+        return map;
+    }
+
+    private void setAllProductions() {
+        setProduction9();
+        setProduction15();
+        setProduction29();
+        setProduction30();
+        setProduction33();
     }
 
     private void setProduction9() {

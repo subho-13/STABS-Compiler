@@ -2,6 +2,7 @@ package parser;
 
 import lexer.Lexer;
 import nonterminal.NonTerminal;
+import parser.driver.Driver;
 import parser.parserstack.ParserStack;
 import parser.parserstack.stacksymbol.StackSymbol;
 import parser.parserstack.stacksymbol.StackSymbolType;
@@ -18,10 +19,26 @@ import java.util.Map;
 
 public class Parser {
     ParserStack parserStack;
-    Map<NonTerminal, Map<Terminal, Production>> driver;
+    Driver driver;
     Lexer lexer;
     SymbolTable symbolTable;
     Synchronizer synchronizer;
+
+    public Parser(ParserStack parserStack, Lexer lexer, SymbolTable symbolTable, Driver driver, Synchronizer synchronizer) throws Exception {
+        this.parserStack = parserStack;
+        this.lexer = lexer;
+        this.symbolTable = symbolTable;
+        this.driver = driver;
+        this.synchronizer = synchronizer;
+
+        initializeParser();
+    }
+
+    private void initializeParser() throws Exception {
+        NonTerminalStackSymbol nonTerminalStackSymbol = new NonTerminalStackSymbol(NonTerminal.PROGRAM);
+        parserStack.push(nonTerminalStackSymbol);
+        lexer.parseNextToken();
+    }
 
     private boolean stopParser() {
         return lexer.isEmpty() && parserStack.isEmpty();
@@ -34,13 +51,14 @@ public class Parser {
             symbol.applySpecialAction(currentToken);
             lexer.parseNextToken();
         } else {
-            //
+            // handle error
         }
     }
 
     private void handleSymbol(NonTerminalStackSymbol symbol) {
         NonTerminal nonTerminal = symbol.getNonTerminalType();
-        Production production = driver.get(nonTerminal).get(lexer.getCurrentToken().getType());
+        Terminal terminal = lexer.getCurrentToken().getType();
+        Production production = driver.getProduction(nonTerminal, terminal);
 
         if(production == null) {
             // Error handling // Panic Mode Error recovery
