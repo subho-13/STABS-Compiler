@@ -9,7 +9,7 @@ import java.io.File;
 
 public class ScannerTest {
     public static  void main(String[] args) {
-        File file = new File("src/test/testfiles/File1.txt");
+        File file = new File("src/test/testfiles/File1.stabs");
         try {
             Scanner scanner = new Scanner(file);
             LexerStateBuilder stateBuilder = new LexerStateBuilder(new StateMapping());
