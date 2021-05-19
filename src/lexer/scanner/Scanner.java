@@ -11,6 +11,7 @@ public class Scanner {
     String currentString;
     private boolean eof = false;
     static int lineNum = 1;
+    static int currentposinline = 0;
 
     public boolean isEOF() {
         return eof;
@@ -26,10 +27,11 @@ public class Scanner {
         if (c == -1) {
             lookahead = '\0';
             eof = true;
-        }
-
-        if (c == '\n') {
+        }else if (c == '\n') {
             lineNum++;
+            currentposinline = 0;
+        } else {
+            currentposinline++;
         }
 
         return (char) c;
@@ -51,6 +53,10 @@ public class Scanner {
 
     public int getNextLineNum() {
         return lineNum;
+    }
+
+    public int getCurrentPosInLine() {
+        return currentposinline;
     }
 
     public String getNextString() throws IOException {

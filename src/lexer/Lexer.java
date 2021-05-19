@@ -34,8 +34,13 @@ public class Lexer {
 
         LexerState currentState = startState;
 
-        for(char c: string.toCharArray()) {
-            currentState = currentState.move(c);
+        try {
+            for(char c: string.toCharArray()) {
+                currentState = currentState.move(c);
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Error is in line " + scanner.getNextLineNum() + " around " + scanner.getCurrentPosInLine() + "th character\n");
         }
 
         currentToken = currentState.getToken(string);
@@ -46,4 +51,5 @@ public class Lexer {
     }
 
     public int getCurrentLineNum() { return scanner.getNextLineNum(); }
+    public int getCurrentPosInLine() { return scanner.getCurrentPosInLine(); }
 }

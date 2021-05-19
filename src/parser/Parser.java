@@ -43,7 +43,13 @@ public class Parser {
         final Token currentToken = lexer.getCurrentToken();
 
         if(symbol.getTerminal() == currentToken.getType()) {
-            symbol.applySpecialAction(currentToken);
+            try {
+                symbol.applySpecialAction(currentToken);
+            } catch (Exception exception) {
+                String errorStmt = exception.getMessage() + "\n";
+                errorStmt += "Error in line " + lexer.getCurrentLineNum() + " around " + lexer.getCurrentPosInLine() + "th character";
+                throw new Exception(errorStmt);
+            }
             if (!lexer.isEmpty()) {
                 lexer.parseNextToken();
             }
@@ -53,13 +59,15 @@ public class Parser {
         }
     }
 
-    private void handleSymbol(NonTerminalStackSymbol symbol) {
+    private void handleSymbol(NonTerminalStackSymbol symbol) throws Exception {
         NonTerminal nonTerminal = symbol.getNonTerminalType();
         Terminal terminal = lexer.getCurrentToken().getType();
         Production production = driver.getProduction(nonTerminal, terminal);
 
         if(production == null) {
-            // Error handling // Panic Mode Error recovery
+            String errorStmt = "Error in line " + lexer.getCurrentLineNum() + " around " + lexer.getCurrentPosInLine() + "th character\n";
+            errorStmt += "Expected Set of Terminals :: " + synchronizer.getTerminals(nonTerminal);
+            throw new Exception(errorStmt);
         }
 
         production.applyRule();

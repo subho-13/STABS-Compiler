@@ -16,11 +16,11 @@ public class LexerState {
         this.map = map;
     }
 
-    public LexerState move(char c) {
+    public LexerState move(char c) throws Exception {
         LexerState state = map.get(c);
 
         if (state == null) {
-            // No transition on this character
+            throw new Exception("No valid Lexer State for current lexeme");
         }
 
         return  state;

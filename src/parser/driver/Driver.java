@@ -1,7 +1,6 @@
 package parser.driver;
 
 import nonterminal.NonTerminal;
-import parser.ParsingException;
 import parser.production.Production;
 import parser.production.builder.ProductionBuilder;
 import terminal.Terminal;
