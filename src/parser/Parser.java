@@ -18,13 +18,11 @@ public class Parser {
     ParserStack parserStack;
     Driver driver;
     Lexer lexer;
-    SymbolTable symbolTable;
     Synchronizer synchronizer;
 
-    public Parser(ParserStack parserStack, Lexer lexer, SymbolTable symbolTable, Driver driver, Synchronizer synchronizer) throws Exception {
+    public Parser(ParserStack parserStack, Lexer lexer, Driver driver, Synchronizer synchronizer) throws Exception {
         this.parserStack = parserStack;
         this.lexer = lexer;
-        this.symbolTable = symbolTable;
         this.driver = driver;
         this.synchronizer = synchronizer;
 

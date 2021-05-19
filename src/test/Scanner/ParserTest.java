@@ -8,6 +8,7 @@ import parser.Parser;
 import parser.driver.Driver;
 import parser.parserstack.ParserStack;
 import parser.production.builder.ProductionBuilder;
+import parser.table.FunctionTable;
 import parser.table.SymbolTable;
 import parser.synchronizer.Synchronizer;
 
@@ -21,13 +22,16 @@ public class ParserTest {
             LexerStateBuilder stateBuilder = new LexerStateBuilder(new StateMapping());
             Lexer lexer = new Lexer(scanner, stateBuilder);
             SymbolTable symbolTable = new SymbolTable();
+            FunctionTable functionTable = new FunctionTable();
             ParserStack parserStack = new ParserStack();
-            ProductionBuilder productionBuilder = new ProductionBuilder(parserStack, symbolTable);
-            System.out.println(productionBuilder.getProduction(4));
+            ProductionBuilder productionBuilder = new ProductionBuilder(parserStack, symbolTable, functionTable);
             Driver driver = new Driver(productionBuilder);
             Synchronizer synchronizer = new Synchronizer();
-            Parser parser = new Parser(parserStack, lexer, symbolTable, driver, synchronizer);
+            Parser parser = new Parser(parserStack, lexer, driver, synchronizer);
             parser.parse();
+            if (functionTable.hasUnresolvedFunctionNames()) {
+                throw new Exception("The following functions are unresolved :: " + functionTable.unresolvedFunctionNames());
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }

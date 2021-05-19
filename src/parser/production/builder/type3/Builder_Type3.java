@@ -26,8 +26,13 @@ public class Builder_Type3 {
         setAllProductions();
     }
 
-    private void setAllProductions() {
+    public Map<Integer, Production_Type3> getMap() {
+        return map;
+    }
 
+    private void setAllProductions() {
+        setProduction4();
+        setProduction52();
     }
 
     private void setProduction4() {
@@ -51,6 +56,21 @@ public class Builder_Type3 {
             parserStack.push(stackSymbol1, stackSymbol2, stackSymbol3, stackSymbol4, stackSymbol5, stackSymbol6);
         });
         map.put(4, production);
+    }
+
+    private void setProduction52() {
+        Production_Type3 production = new Production_Type3(stack, table, (parserStack, functionTable) -> {
+            TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.LEFT_PARA);
+            NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.ARGUMENTS);
+            TerminalStackSymbol stackSymbol3 = new TerminalStackSymbol(Terminal.RIGHT_PARA);
+            TerminalStackSymbol stackSymbol4 = new SpecialTerminalStackSymbol<>(Terminal.IDENTIFIER, functionTable, (table, token) -> {
+                IdentifierToken identifierToken = (IdentifierToken) token;
+                table.checkFunctionName(identifierToken.getValue());
+            });
+            parserStack.push(stackSymbol1, stackSymbol2, stackSymbol3, stackSymbol4);
+        });
+
+        map.put(52, production);
     }
 
 }

@@ -28,7 +28,7 @@ public class Builder_Type1 {
         setProduction1();
         setProduction2();
         setProduction3();
-        setProduction4();
+//        setProduction4();
         setProduction5();
         setProduction6();
         setProduction7();
@@ -71,7 +71,7 @@ public class Builder_Type1 {
         setProduction49();
         setProduction50();
         setProduction51();
-        setProduction52();
+//        setProduction52();
         setProduction53();
         setProduction54();
         setProduction55();
@@ -137,19 +137,19 @@ public class Builder_Type1 {
         map.put(3, production);
     }
 
-    private void setProduction4() {
-        Production_Type1 production  = new Production_Type1(stack, (parserTable) -> {
-            NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.TYPE);
-            TerminalStackSymbol stackSymbol2 = new TerminalStackSymbol(Terminal.IDENTIFIER);
-            TerminalStackSymbol stackSymbol3 = new TerminalStackSymbol(Terminal.LEFT_PARA);
-            NonTerminalStackSymbol stackSymbol4 = new NonTerminalStackSymbol(NonTerminal.PARAMETERS);
-            TerminalStackSymbol stackSymbol5 = new TerminalStackSymbol(Terminal.RIGHT_PARA);
-            NonTerminalStackSymbol stackSymbol6 = new NonTerminalStackSymbol(NonTerminal.BLOCK);
-            parserTable.push(stackSymbol1, stackSymbol2, stackSymbol3, stackSymbol4, stackSymbol5, stackSymbol6);
-        });
-
-        map.put(4, production);
-    }
+//    private void setProduction4() {
+//        Production_Type1 production  = new Production_Type1(stack, (parserTable) -> {
+//            NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.TYPE);
+//            TerminalStackSymbol stackSymbol2 = new TerminalStackSymbol(Terminal.IDENTIFIER);
+//            TerminalStackSymbol stackSymbol3 = new TerminalStackSymbol(Terminal.LEFT_PARA);
+//            NonTerminalStackSymbol stackSymbol4 = new NonTerminalStackSymbol(NonTerminal.PARAMETERS);
+//            TerminalStackSymbol stackSymbol5 = new TerminalStackSymbol(Terminal.RIGHT_PARA);
+//            NonTerminalStackSymbol stackSymbol6 = new NonTerminalStackSymbol(NonTerminal.BLOCK);
+//            parserTable.push(stackSymbol1, stackSymbol2, stackSymbol3, stackSymbol4, stackSymbol5, stackSymbol6);
+//        });
+//
+//        map.put(4, production);
+//    }
 
     private void setProduction5(){
         Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
@@ -483,16 +483,18 @@ public class Builder_Type1 {
         });
         map.put(51, production);
     }
-    private void setProduction52(){
-        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
-        TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.LEFT_PARA);
-        NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.ARGUMENTS);
-        TerminalStackSymbol stackSymbol3 = new TerminalStackSymbol(Terminal.RIGHT_PARA);
-        NonTerminalStackSymbol stackSymbol4 = new NonTerminalStackSymbol(NonTerminal.IDENTIFIERS);
-        parserStack.push(stackSymbol1, stackSymbol2, stackSymbol3, stackSymbol4);
-        });
-        map.put(52, production);
-    }
+//    private void setProduction52(){
+//        Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
+//        TerminalStackSymbol stackSymbol1 = new TerminalStackSymbol(Terminal.LEFT_PARA);
+//        NonTerminalStackSymbol stackSymbol2 = new NonTerminalStackSymbol(NonTerminal.ARGUMENTS);
+//        TerminalStackSymbol stackSymbol3 = new TerminalStackSymbol(Terminal.RIGHT_PARA);
+//        NonTerminalStackSymbol stackSymbol4 = new NonTerminalStackSymbol(NonTerminal.IDENTIFIERS);
+//        parserStack.push(stackSymbol1, stackSymbol2, stackSymbol3, stackSymbol4);
+//        });
+//        map.put(52, production);
+//    }
+
+
     private void setProduction53(){
         Production_Type1 production = new Production_Type1(stack, (parserStack) -> {
         NonTerminalStackSymbol stackSymbol1 = new NonTerminalStackSymbol(NonTerminal.ARGUMENT);
