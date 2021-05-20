@@ -50,35 +50,35 @@ public class ParseTree {
             return;
         }
 
-        for (int i = 1; i < depth; ++i) {
+        for (int i = 0; i < depth; ++i) {
             if (flag.contains(i)) {
                 writer.write("| "
                         + " "
                         + " "
                         + " ");
             } else {
-                writer.write(" "
+                writer.write("| "
                         + " "
                         + " "
                         + " ");
             }
         }
 
-            if (depth == 0) {
-                writer.write(root.getSymbol() + '\n');
-            } else if (isLast) {
-                writer.write("+--- " +  root.getSymbol() + '\n');
-                flag.remove(depth);
-            } else {
-                writer.write("+--- " +  root.getSymbol() + '\n');
-            }
+        if (depth == 0) {
+            writer.write(root.getSymbol() + '\n');
+        } else if (isLast) {
+            writer.write("|--> " +  root.getSymbol() + '\n');
+            flag.remove(depth);
+        } else {
+            writer.write("|--> " +  root.getSymbol() + '\n');
+        }
 
-            int it = 0;
-            Queue<ParseNode> queue = root.getParseNodeQueue();
-            for (ParseNode node : queue) {
-                ++it;
-                printTree(node, flag, depth + 1, it == (queue.size()) - 1, writer );
-            }
+        int it = 0;
+        Queue<ParseNode> queue = root.getParseNodeQueue();
+        for (ParseNode node : queue) {
+            ++it;
+            printTree(node, flag, depth + 1, it == (queue.size()) - 1, writer );
+        }
         flag.add(depth);
     }
 }
