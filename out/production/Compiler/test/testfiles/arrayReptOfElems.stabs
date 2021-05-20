@@ -1,5 +1,4 @@
 int arrayReptOfElems(int[6] arr) {
-
 	int i;
 	i = 0;
 

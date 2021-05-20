@@ -13,17 +13,6 @@ Root
 |    |    |    |    |--> BLOCK
 |    |    |    |    |    |--> LEFT_CURLY
 |    |    |    |    |    |--> STATEMENTS
-|    |    |    |    |    |    |--> STATEMENT
-|    |    |    |    |    |    |    |--> DECLARATION
-|    |    |    |    |    |    |    |    |--> TYPE
-|    |    |    |    |    |    |    |    |    |--> TYPE_PART_1
-|    |    |    |    |    |    |    |    |    |    |--> INT
-|    |    |    |    |    |    |    |    |    |--> TYPE_PART_2
-|    |    |    |    |    |    |    |    |--> IDENTIFIERS
-|    |    |    |    |    |    |    |    |    |--> IDENTIFIER
-|    |    |    |    |    |    |    |    |    |--> OTHER_IDS
-|    |    |    |    |    |    |--> SEMICOLON
-|    |    |    |    |    |    |--> STATEMENTS
 |    |    |    |    |    |--> RIGHT_CURLY
 |    |    |    |--> FUNCTIONS
 |    |    |--> EOF
