@@ -1,0 +1,51 @@
+// all productions are listed here
+
+program -> functions eof
+functions -> function functions | ϵ
+function -> type identifier ( parameters ) block
+parameters -> parameter other_params | ϵ
+other_params -> , parameter other_params | ϵ
+parameter -> type identifier
+type -> type_part_1 type_part_2
+type_part_1 -> int | float
+type_part_2 -> [ int_val ] | ϵ
+block -> { statements }
+statements -> statement ; statements | compound_stmt statements | ϵ
+statement -> declaration | assignment | inc_dec_stmt | io_stmt | return_stmt | function_stmt
+compound_stmt -> if_stmt | for_stmt | block
+declaration -> type identifiers
+identifiers -> identifier other_ids
+other_ids -> , identifier other_ids | ϵ
+assignment -> variable = value
+variable -> identifier variable_opt
+variable_opt -> [ num_expr ] | ϵ
+value -> array | num_expr
+array -> { array_elems }
+array_elems -> num_expr other_elems
+other_elems -> , num_expr other_elems | ϵ
+inc_dec_stmt -> ++ variable | -- variable
+io_stmt -> print num_expr | input num_expr
+if_stmt -> if bool_expr block else_stmt
+else_stmt -> else block | ϵ
+for_stmt -> for bool_expr block
+return_stmt -> return variable
+function_stmt -> func_expr
+func_expr -> ( arguments ) identifier
+arguments -> argument other_args | ϵ
+other_args -> , argument other_args | ϵ
+argument -> num_expr
+mul_op -> * | /
+add_op -> + | -
+rel_op -> == | != | < | <= | > | >=
+and_op -> &&
+or_op -> ||
+num_expr -> T N_
+N_ -> add_op num_expr | ϵ
+T -> F T_
+T_ ->  mul_op T | ϵ
+F -> variable | func_expr | int_val | float_val
+bool_expr -> X B_
+B_ -> or_op bool_expr | ϵ
+X -> Y X_
+X_ -> and_op X | ϵ
+Y -> num_expr rel_op num_expr
